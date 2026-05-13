@@ -8,7 +8,7 @@ import { SITE, QUOTES } from '@/lib/placeholders';
 
 export const metadata = pageMetadata({
   title: 'O nas',
-  description: `Poznaj naszą rodzinę i historię hodowli ${SITE.name}. Modesta Adamczyk i Artur — pasjonaci wyżła czeskiego, myśliwi, hodowcy z Bibic koło Krakowa.`,
+  description: `Poznaj naszą rodzinę i historię hodowli ${SITE.name}. Modesta i Adam Adamczyk — pasjonaci wyżła czeskiego, hodowcy z Bibic koło Krakowa.`,
   path: '/o-nas',
 });
 
@@ -28,7 +28,7 @@ export default function AboutPage() {
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
               <p className="eyebrow">O nas</p>
-              <h1 className="heading-xl">Modesta, Artur, Aria i Eros</h1>
+              <h1 className="heading-xl">Modesta, Adam, Aria i Eros</h1>
               <div className="ornament-divider">
                 <span aria-hidden="true" />
               </div>
@@ -61,11 +61,19 @@ export default function AboutPage() {
               <h2 className="heading-lg text-bark-700">Hodowla założona z pasji</h2>
               <p className="leading-relaxed">
                 Jesteśmy{' '}
-                <strong className="text-bark-700">Modestą Adamczyk i Arturem</strong>{' '}
-                — parą myśliwych i miłośników psów rasowych z Bibic koło Krakowa.{' '}
-                <em>Kraina Wąsaczy</em> to nie tylko nazwa hodowli — to wyraz naszej
-                fascynacji wyżłem czeskim szorstkowłosym (Český fousek), mało
-                jeszcze znaną w Polsce, ale niezwykle wszechstronną rasą myśliwską.
+                <strong className="text-bark-700">Modestą i Adamem Adamczyk</strong>{' '}
+                — rodziną z Bibic koło Krakowa, dla której wyżeł czeski to coś
+                znacznie więcej niż rasa psa. <em>Kraina Wąsaczy</em> to wyraz
+                naszej fascynacji czeskim foušekiem (Český fousek) — mało jeszcze
+                znaną w Polsce, ale niezwykle wszechstronną rasą myśliwską.
+              </p>
+              <p className="leading-relaxed">
+                <strong>Adam</strong> jest myśliwym — myślistwo to tradycja w jego
+                rodzinie od pokoleń, podobnie jak miłość do wyżłów. To on prowadzi
+                Arię i Erosa w łowisku, pracuje z nimi w polu, lesie i nad wodą.
+                <strong> Modesta</strong> czuwa nad szczeniętami — codzienna
+                opieka, socjalizacja, dbanie o ich dobrostan — i razem z psami
+                pokonuje kilometry w terenie podczas wspólnego biegania.
               </p>
               <p className="leading-relaxed">
                 Hodowlę założyliśmy z pasji, nie z planu biznesowego. Naszym celem
@@ -75,16 +83,16 @@ export default function AboutPage() {
               <p className="leading-relaxed">
                 Aria i Eros są dla nas członkami rodziny, nie produkcją hodowlaną.
                 Mieszkają z nami w domu, dorastają razem, codziennie chodzą
-                z nami w teren — do lasu, na łąki, nad wodę. Tak też wychowują się
-                nasze szczenięta: w domowych warunkach, otoczone uwagą,
-                socjalizowane od pierwszych tygodni.
+                z nami w teren. Tak też wychowują się nasze szczenięta:
+                w domowych warunkach, otoczone uwagą, socjalizowane od
+                pierwszych tygodni.
               </p>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* RODZINNE ZDJĘCIA — Modesta + Artur + Aria + Eros */}
+      {/* RODZINNE ZDJĘCIA — Razem na co dzień */}
       <section className="bg-cream-100">
         <div className="container-wide py-16">
           <Reveal>
@@ -103,8 +111,8 @@ export default function AboutPage() {
             <Reveal direction="left">
               <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg shadow-lg ring-1 ring-bark-100/40">
                 <Image
-                  src="/images/inne/2025-02-09_122200512380236139.avif"
-                  alt="Rodzinne zdjęcie — Modesta, Artur, Aria i Eros w salonie"
+                  src="/images/inne/2024-08-26_122164022528236139.avif"
+                  alt="Adam z Erosem — codzienność hodowli"
                   fill
                   sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover"
@@ -114,8 +122,8 @@ export default function AboutPage() {
             <Reveal direction="right">
               <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg shadow-lg ring-1 ring-bark-100/40">
                 <Image
-                  src="/images/inne/2025-02-09_122200512470236139.avif"
-                  alt="Z naszymi psami w domu"
+                  src="/images/inne/2025-02-09_122200512380236139.avif"
+                  alt="Modesta i Adam z Arią i Erosem w domu"
                   fill
                   sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover"
@@ -142,20 +150,20 @@ export default function AboutPage() {
                 <Heart className="mx-auto h-10 w-10 text-burgundy-500" aria-hidden="true" />
                 <h3 className="font-serif text-xl mt-4">Pies = członek rodziny</h3>
                 <p className="mt-3 text-sm leading-relaxed text-bark-400">
-                  Psy nie żyją u nas w boksach — śpią w domu, jedzą z nami, dorastają
-                  razem z dziećmi. Tę samą filozofię polecamy każdemu kto rezerwuje
-                  u nas szczeniaka.
+                  Psy nie żyją u nas w boksach — śpią w domu, jedzą z nami, biegają
+                  z Modestą po lesie i polach. Tę samą filozofię polecamy każdemu,
+                  kto rezerwuje u nas szczeniaka.
                 </p>
               </div>
             </Reveal>
             <Reveal delay={120}>
               <div className="card-paper h-full p-8 text-center">
                 <Crosshair className="mx-auto h-10 w-10 text-forest-400" aria-hidden="true" />
-                <h3 className="font-serif text-xl mt-4">Linia użytkowa</h3>
+                <h3 className="font-serif text-xl mt-4">Tradycja myśliwska</h3>
                 <p className="mt-3 text-sm leading-relaxed text-bark-400">
-                  Hodowca jest myśliwym. Stawiamy na psy gotowe do pracy w polu,
-                  lesie i nad wodą. Aria i Eros codziennie pracują z nami w łowisku —
-                  ich potomstwo dziedziczy ten instynkt.
+                  Adam to myśliwy z pokoleniami tradycji w rodzinie — wyżły mieli
+                  jego rodzice i dziadkowie. Aria i Eros pracują z nim w łowisku,
+                  a ich potomstwo dziedziczy ten naturalny instynkt.
                 </p>
               </div>
             </Reveal>
