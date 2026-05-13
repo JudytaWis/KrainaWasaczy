@@ -302,7 +302,7 @@ export default function HomePage() {
 
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-gold/30 shadow-xl">
             <Image
-              src="/images/inne/2025-08-29_122247499040236139.avif"
+              src="/images/miot-a/2024-05-07_122134524056236139.avif"
               alt="Český fousek — wyżeł czeski szorstkowłosy"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -327,9 +327,9 @@ export default function HomePage() {
           </Reveal>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {NEWS.slice(0, 6).map((item, i) => (
-              <Reveal key={item.id} delay={i * 80}>
-                <article className="card-paper flex h-full flex-col overflow-hidden">
+            {NEWS.slice(0, 6).map((item, i) => {
+              const cardContent = (
+                <article className="card-paper group flex h-full flex-col overflow-hidden transition hover:shadow-xl hover:ring-1 hover:ring-gold/40">
                   {item.image && (
                     <div className="relative aspect-[4/3] w-full overflow-hidden">
                       <Image
@@ -338,7 +338,7 @@ export default function HomePage() {
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         loading="lazy"
-                        className="object-cover"
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                       />
                     </div>
                   )}
@@ -356,16 +356,39 @@ export default function HomePage() {
                         {item.category}
                       </span>
                     </div>
-                    <h3 className="mt-3 font-serif text-xl leading-tight text-bark-700">
+                    <h3 className="mt-3 font-serif text-xl leading-tight text-bark-700 group-hover:text-forest-400">
                       {item.title}
                     </h3>
                     <p className="mt-3 flex-1 text-sm leading-relaxed text-bark-500">
                       {item.excerpt}
                     </p>
+                    {item.fbUrl && (
+                      <span className="mt-4 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.14em] text-forest-400">
+                        Zobacz na Facebooku
+                        <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                      </span>
+                    )}
                   </div>
                 </article>
-              </Reveal>
-            ))}
+              );
+              return (
+                <Reveal key={item.id} delay={i * 80}>
+                  {item.fbUrl ? (
+                    <a
+                      href={item.fbUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block h-full"
+                      aria-label={`${item.title} — otwiera post na Facebooku w nowej karcie`}
+                    >
+                      {cardContent}
+                    </a>
+                  ) : (
+                    cardContent
+                  )}
+                </Reveal>
+              );
+            })}
           </div>
 
           <div className="mt-10 text-center">
