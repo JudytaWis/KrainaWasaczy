@@ -571,7 +571,7 @@ export const NEWS: readonly NewsItem[] = [
     title: 'Hunting Expo Kraków',
     excerpt: 'Mieliśmy okazję uczestniczyć w wystawie Hunting Expo w Krakowie. Spotkania, rozmowy z myśliwymi, pasjonatami i hodowcami — wyjątkowa atmosfera tradycji łowieckich.',
     category: 'wydarzenia',
-    image: '/images/miot-b/2025-05-04_122221659962236139.avif',
+    image: '/images/miot-b/2025-05-04_122221659986236139.avif',
     fbUrl: 'https://www.facebook.com/permalink.php?story_fbid=122221661414236139&id=61557084189380',
   },
   {
