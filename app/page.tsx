@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowRight, Award, HeartHandshake, Trees, Crosshair } from 'lucide-react';
 import { DogCard } from '@/components/DogCard';
 import { JsonLd } from '@/components/JsonLd';
+import { Reveal } from '@/components/Reveal';
 import { pageMetadata, breadcrumbJsonLd } from '@/lib/seo';
 import { DOGS, SITE, LITTERS, BREED_INFO, QUOTES } from '@/lib/placeholders';
 
@@ -113,74 +114,88 @@ export default function HomePage() {
 
       {/* O HODOWLI */}
       <section className="section">
-        <div className="container-prose text-center">
-          <p className="eyebrow">O hodowli</p>
-          <h2 className="heading-lg">Pasja, myślistwo, miłość do rasy</h2>
-          <div className="ornament-divider">
-            <span aria-hidden="true" />
+        <Reveal>
+          <div className="container-prose text-center">
+            <p className="eyebrow">O hodowli</p>
+            <h2 className="heading-lg">Pasja, myślistwo, miłość do rasy</h2>
+            <div className="ornament-divider">
+              <span aria-hidden="true" />
+            </div>
+            <p className="mt-2 text-lg leading-relaxed text-bark-500">
+              Kraina Wąsaczy to nowo powstała hodowla z Bibic koło Krakowa,
+              zarejestrowana w {SITE.registration}. Naszym celem jest rozpropagowanie
+              tej mało znanej w naszym kraju wspaniałej rasy psów. Hodowla założona
+              z pasji — z myślą o miłośnikach wyżła czeskiego, dla których pies to nie
+              tylko towarzysz, ale i partner w łowisku.
+            </p>
+            <p className="mt-4 text-bark-500">
+              Hodowca jest myśliwym. Stawiamy na linie użytkowe, sprawdzone
+              pochodzenie i psy gotowe do pracy w polu, lesie i nad wodą.
+            </p>
           </div>
-          <p className="mt-2 text-lg leading-relaxed text-bark-500">
-            Kraina Wąsaczy to nowo powstała hodowla z Bibic koło Krakowa,
-            zarejestrowana w {SITE.registration}. Naszym celem jest rozpropagowanie
-            tej mało znanej w naszym kraju wspaniałej rasy psów. Hodowla założona
-            z pasji — z myślą o miłośnikach wyżła czeskiego, dla których pies to nie
-            tylko towarzysz, ale i partner w łowisku.
-          </p>
-          <p className="mt-4 text-bark-500">
-            Hodowca jest myśliwym. Stawiamy na linie użytkowe, sprawdzone
-            pochodzenie i psy gotowe do pracy w polu, lesie i nad wodą.
-          </p>
-        </div>
+        </Reveal>
 
         <div className="container-wide mt-16 grid gap-8 sm:grid-cols-3">
-          <div className="card-paper p-8 text-center">
-            <Crosshair
-              className="mx-auto h-10 w-10 text-forest-400"
-              aria-hidden="true"
-            />
-            <h3 className="heading-md mt-4 text-xl">Linia użytkowa</h3>
-            <p className="mt-3 text-sm leading-relaxed text-bark-400">
-              Sprawdzone pochodzenie, psy pracujące w łowisku — wystawianie, aport
-              z lądu i z wody, tropienie.
-            </p>
-          </div>
-          <div className="card-paper p-8 text-center">
-            <Award className="mx-auto h-10 w-10 text-forest-400" aria-hidden="true" />
-            <h3 className="heading-md mt-4 text-xl">Rodowód ZKwP / FCI</h3>
-            <p className="mt-3 text-sm leading-relaxed text-bark-400">
-              Hodowla zarejestrowana w Związku Kynologicznym w Polsce. Rodzice z badaniami
-              i dopuszczeniami do hodowli.
-            </p>
-          </div>
-          <div className="card-paper p-8 text-center">
-            <HeartHandshake
-              className="mx-auto h-10 w-10 text-forest-400"
-              aria-hidden="true"
-            />
-            <h3 className="heading-md mt-4 text-xl">Wychowanie rodzinne</h3>
-            <p className="mt-3 text-sm leading-relaxed text-bark-400">
-              Szczenięta rodzą się i dorastają w domu — od pierwszych dni socjalizacja,
-              kontakt z ludźmi i naturą.
-            </p>
-          </div>
+          <Reveal delay={0}>
+            <div className="card-paper p-8 text-center">
+              <Crosshair
+                className="mx-auto h-10 w-10 text-forest-400"
+                aria-hidden="true"
+              />
+              <h3 className="heading-md mt-4 text-xl">Linia użytkowa</h3>
+              <p className="mt-3 text-sm leading-relaxed text-bark-400">
+                Sprawdzone pochodzenie, psy pracujące w łowisku — wystawianie, aport
+                z lądu i z wody, tropienie.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={120}>
+            <div className="card-paper p-8 text-center">
+              <Award className="mx-auto h-10 w-10 text-forest-400" aria-hidden="true" />
+              <h3 className="heading-md mt-4 text-xl">Rodowód ZKwP / FCI</h3>
+              <p className="mt-3 text-sm leading-relaxed text-bark-400">
+                Hodowla zarejestrowana w Związku Kynologicznym w Polsce. Rodzice z badaniami
+                i dopuszczeniami do hodowli.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={240}>
+            <div className="card-paper p-8 text-center">
+              <HeartHandshake
+                className="mx-auto h-10 w-10 text-forest-400"
+                aria-hidden="true"
+              />
+              <h3 className="heading-md mt-4 text-xl">Wychowanie rodzinne</h3>
+              <p className="mt-3 text-sm leading-relaxed text-bark-400">
+                Szczenięta rodzą się i dorastają w domu — od pierwszych dni socjalizacja,
+                kontakt z ludźmi i naturą.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       {/* NASI RODZICE */}
       <section className="section bg-cream-100">
         <div className="container-wide">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="eyebrow">Nasi rodzice</p>
-            <h2 className="heading-lg">Nancy i Eros</h2>
-            <p className="mt-4 text-bark-500">
-              Poznaj psy, które tworzą podstawę naszej hodowli — ich rodowody,
-              osiągnięcia w łowisku i charaktery.
-            </p>
-          </div>
+          <Reveal>
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="eyebrow">Nasi rodzice</p>
+              <h2 className="heading-lg">Nancy i Eros</h2>
+              <p className="mt-4 text-bark-500">
+                Poznaj psy, które tworzą podstawę naszej hodowli — ich rodowody,
+                osiągnięcia w łowisku i charaktery.
+              </p>
+            </div>
+          </Reveal>
 
           <div className="mt-12 grid gap-8 sm:grid-cols-2">
-            <DogCard dog={DOGS.mama} />
-            <DogCard dog={DOGS.tata} />
+            <Reveal direction="left">
+              <DogCard dog={DOGS.mama} />
+            </Reveal>
+            <Reveal direction="right">
+              <DogCard dog={DOGS.tata} />
+            </Reveal>
           </div>
         </div>
       </section>
@@ -188,21 +203,23 @@ export default function HomePage() {
       {/* MIOTY — karty A / B / C */}
       <section className="section">
         <div className="container-wide">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="eyebrow">Mioty</p>
-            <h2 className="heading-lg">Historia i przyszłość Krainy Wąsaczy</h2>
-            <p className="mt-4 text-bark-500">
-              Od pierwszego miotu w marcu 2024 — z każdym kolejnym pokoleniem dbamy
-              o jakość, charakter i predyspozycje pracy.
-            </p>
-          </div>
+          <Reveal>
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="eyebrow">Mioty</p>
+              <h2 className="heading-lg">Historia i przyszłość Krainy Wąsaczy</h2>
+              <p className="mt-4 text-bark-500">
+                Od pierwszego miotu w marcu 2024 — z każdym kolejnym pokoleniem dbamy
+                o jakość, charakter i predyspozycje pracy.
+              </p>
+            </div>
+          </Reveal>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
-            {LITTERS.map((litter) => (
+            {LITTERS.map((litter, i) => (
+              <Reveal key={litter.id} delay={i * 100}>
               <Link
-                key={litter.id}
                 href={`/mioty/${litter.id}`}
-                className="card-paper flex flex-col p-6"
+                className="card-paper flex h-full flex-col p-6"
               >
                 <div className="flex items-center justify-between">
                   <p className="eyebrow !mb-0">{litter.name}</p>
@@ -225,6 +242,7 @@ export default function HomePage() {
                   Zobacz miot <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </span>
               </Link>
+              </Reveal>
             ))}
           </div>
 
@@ -277,21 +295,25 @@ export default function HomePage() {
       {/* DLA KOGO NASZE SZCZENIĘTA */}
       <section className="section">
         <div className="container-wide">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="eyebrow">Dla kogo nasze szczenięta</p>
-            <h2 className="heading-lg">Komu polecamy Krainę Wąsaczy</h2>
-            <p className="mt-4 text-bark-500">„{QUOTES.audience}"</p>
-          </div>
+          <Reveal>
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="eyebrow">Dla kogo nasze szczenięta</p>
+              <h2 className="heading-lg">Komu polecamy Krainę Wąsaczy</h2>
+              <p className="mt-4 text-bark-500">„{QUOTES.audience}"</p>
+            </div>
+          </Reveal>
 
           <div className="mt-12 grid gap-8 sm:grid-cols-3">
-            {BREED_INFO.targetAudience.map((target) => (
-              <div key={target.title} className="card-paper p-8">
-                <Trees className="h-8 w-8 text-forest-400" aria-hidden="true" />
-                <h3 className="font-serif text-xl mt-4">{target.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-bark-400">
-                  {target.desc}
-                </p>
-              </div>
+            {BREED_INFO.targetAudience.map((target, i) => (
+              <Reveal key={target.title} delay={i * 120}>
+                <div className="card-paper h-full p-8">
+                  <Trees className="h-8 w-8 text-forest-400" aria-hidden="true" />
+                  <h3 className="font-serif text-xl mt-4">{target.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-bark-400">
+                    {target.desc}
+                  </p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>

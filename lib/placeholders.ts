@@ -167,6 +167,10 @@ export type Litter = {
   longDescription?: string;
   notableLittermates?: Array<{ name: string; desc: string }>;
   galleryCount: number;
+  /** Konkretne zdjęcia (ścieżki w /public). Jeśli puste — wyświetlają się placeholdery. */
+  images?: readonly string[];
+  /** Okładka miotu na liście /mioty oraz na home page */
+  coverImage?: string;
   /** Dla miotu planowanego — CTA do rezerwacji */
   ctaText?: string;
 };
@@ -213,6 +217,17 @@ export const LITTERS: readonly Litter[] = [
       },
     ],
     galleryCount: 8,
+    coverImage: '/images/miot-b/miot-b-1.avif',
+    images: [
+      '/images/miot-b/miot-b-1.avif',
+      '/images/miot-b/miot-b-2.avif',
+      '/images/miot-b/miot-b-3.avif',
+      '/images/miot-b/miot-b-4.avif',
+      '/images/miot-b/miot-b-5.avif',
+      '/images/miot-b/miot-b-6.avif',
+      '/images/miot-b/miot-b-7.avif',
+      '/images/miot-b/miot-b-8.avif',
+    ],
   },
   {
     id: 'c',
@@ -309,11 +324,15 @@ export const GALLERY: readonly GalleryItem[] = [
   { src: '/images/galeria/miot-a-1.jpg', alt: 'Miot A — szczenięta w pierwszych tygodniach', category: 'mioty' },
   { src: '/images/galeria/miot-a-2.jpg', alt: 'Miot A — zabawa', category: 'mioty' },
   { src: '/images/galeria/miot-a-3.jpg', alt: 'Miot A — pierwsze wyjście', category: 'mioty' },
-  // Miot B
-  { src: '/images/galeria/miot-b-1.jpg', alt: 'Miot B — Nancy z miotem', category: 'mioty' },
-  { src: '/images/galeria/miot-b-2.jpg', alt: 'Miot B — szczenięta', category: 'mioty' },
-  { src: '/images/galeria/miot-b-basta-1.jpg', alt: 'Basta z Krainy Wąsaczy', category: 'mioty', caption: 'Basta — brązowy deresz' },
-  { src: '/images/galeria/miot-b-basta-2.jpg', alt: 'Basta — pierwsze tygodnie', category: 'mioty' },
+  // Miot B (zdjęcia z 27.05.2025)
+  { src: '/images/miot-b/miot-b-1.avif', alt: 'Miot B — Nancy ze szczeniętami', category: 'mioty' },
+  { src: '/images/miot-b/miot-b-2.avif', alt: 'Miot B — szczenięta', category: 'mioty' },
+  { src: '/images/miot-b/miot-b-3.avif', alt: 'Miot B — pierwsze tygodnie', category: 'mioty' },
+  { src: '/images/miot-b/miot-b-4.avif', alt: 'Miot B — szczenięta razem', category: 'mioty' },
+  { src: '/images/miot-b/miot-b-5.avif', alt: 'Miot B — Basta i rodzeństwo', category: 'mioty', caption: 'Basta — brązowy deresz' },
+  { src: '/images/miot-b/miot-b-6.avif', alt: 'Miot B — portret szczenięcia', category: 'mioty' },
+  { src: '/images/miot-b/miot-b-7.avif', alt: 'Miot B — zabawa', category: 'mioty' },
+  { src: '/images/miot-b/miot-b-8.avif', alt: 'Miot B — odpoczynek', category: 'mioty' },
   // Praca w polu
   { src: '/images/galeria/praca-1.jpg', alt: 'Praca w polu — wystawianie', category: 'praca' },
   { src: '/images/galeria/praca-2.jpg', alt: 'Aport z lądu', category: 'praca' },

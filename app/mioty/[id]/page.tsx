@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { ArrowLeft, ArrowRight, CalendarDays, Star, Lock, Info } from 'lucide-react';
 import { JsonLd } from '@/components/JsonLd';
+import { Reveal } from '@/components/Reveal';
 import { pageMetadata, breadcrumbJsonLd } from '@/lib/seo';
 import { LITTERS, LITTERS_BY_ID, SITE, type Litter } from '@/lib/placeholders';
 
@@ -134,23 +136,39 @@ export default function LitterPage({ params }: { params: Params }) {
       {/* GALERIA */}
       <section className="section bg-cream-100">
         <div className="container-wide">
-          <p className="eyebrow text-center">Galeria miotu</p>
-          <h2 className="heading-lg text-center">Zdjęcia szczeniąt i rodziców</h2>
-          <div className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4">
-            {gallerySlots.map((_, i) => (
-              <div
-                key={i}
-                className="placeholder-frame aspect-square"
-                aria-label={`${litter.name} — miejsce na zdjęcie ${i + 1}`}
-              >
-                {/* TODO: <Image src={`/images/miot-${litter.id}/${i+1}.jpg`} ... /> */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-xs uppercase tracking-[0.18em]">
-                    Zdjęcie {i + 1}
-                  </span>
-                </div>
-              </div>
-            ))}
+          <Reveal>
+            <p className="eyebrow text-center">Galeria miotu</p>
+            <h2 className="heading-lg text-center">Zdjęcia szczeniąt i rodziców</h2>
+          </Reveal>
+          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {litter.images && litter.images.length > 0
+              ? litter.images.map((src, i) => (
+                  <Reveal key={src} delay={i * 60} className="contents">
+                    <figure className="group relative aspect-[4/3] overflow-hidden rounded-lg bg-cream-200 shadow-sm ring-1 ring-bark-100/40 transition duration-500 hover:shadow-lg hover:ring-gold-500/50">
+                      <Image
+                        src={src}
+                        alt={`${litter.name} — zdjęcie ${i + 1}`}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        loading={i < 3 ? 'eager' : 'lazy'}
+                      />
+                    </figure>
+                  </Reveal>
+                ))
+              : gallerySlots.map((_, i) => (
+                  <div
+                    key={i}
+                    className="placeholder-frame aspect-square"
+                    aria-label={`${litter.name} — miejsce na zdjęcie ${i + 1}`}
+                  >
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="text-xs uppercase tracking-[0.18em]">
+                        Zdjęcie {i + 1}
+                      </span>
+                    </div>
+                  </div>
+                ))}
           </div>
         </div>
       </section>
