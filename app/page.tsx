@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import { ArrowRight, Award, HeartHandshake, Trees, Crosshair } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowRight, Award, HeartHandshake, Trees, Crosshair, CalendarDays } from 'lucide-react';
 import { DogCard } from '@/components/DogCard';
 import { JsonLd } from '@/components/JsonLd';
 import { Reveal } from '@/components/Reveal';
 import { pageMetadata, breadcrumbJsonLd } from '@/lib/seo';
-import { DOGS, SITE, LITTERS, BREED_INFO, QUOTES } from '@/lib/placeholders';
+import { DOGS, SITE, LITTERS, BREED_INFO, QUOTES, NEWS } from '@/lib/placeholders';
 
 export const metadata = pageMetadata({
   title: 'Strona główna',
@@ -65,17 +66,15 @@ export default function HomePage() {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="placeholder-frame aspect-[4/5] w-full ring-1 ring-gold/30">
-              {/* TODO: <Image src="/images/hero.jpg" alt="..." fill priority /> */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="px-8 text-center text-sm uppercase tracking-[0.18em]">
-                  Zdjęcie hero
-                  <br />
-                  <span className="text-xs normal-case tracking-normal text-bark-400">
-                    /public/images/hero.jpg
-                  </span>
-                </span>
-              </div>
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg ring-1 ring-gold/30 shadow-2xl">
+              <Image
+                src="/images/inne/2025-09-24_122252410712236139.avif"
+                alt="Wyżeł czeski (Český fousek) — Kraina Wąsaczy"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -277,17 +276,84 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="placeholder-frame aspect-[4/3] w-full ring-1 ring-gold/30">
-            {/* TODO: <Image src="/images/rasa.jpg" alt="Český fousek" fill /> */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="px-8 text-center text-sm uppercase tracking-[0.18em]">
-                Zdjęcie rasy
-                <br />
-                <span className="text-xs normal-case tracking-normal text-bark-400">
-                  /public/images/rasa.jpg
-                </span>
-              </span>
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-gold/30 shadow-xl">
+            <Image
+              src="/images/inne/2025-08-29_122247499040236139.avif"
+              alt="Český fousek — wyżeł czeski szorstkowłosy"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* AKTUALNOŚCI — wybrane wpisy z naszego Facebooka */}
+      <section className="section">
+        <div className="container-wide">
+          <Reveal>
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="eyebrow">Aktualności</p>
+              <h2 className="heading-lg">Z naszego życia</h2>
+              <p className="mt-4 text-bark-500">
+                Najnowsze wpisy z Facebooka — mioty, codzienność, porady zdrowotne,
+                wystawy i wydarzenia.
+              </p>
             </div>
+          </Reveal>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {NEWS.slice(0, 6).map((item, i) => (
+              <Reveal key={item.id} delay={i * 80}>
+                <article className="card-paper flex h-full flex-col overflow-hidden">
+                  {item.image && (
+                    <div className="relative aspect-[4/3] w-full overflow-hidden">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        loading="lazy"
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
+                  <div className="flex flex-1 flex-col p-6">
+                    <div className="flex items-center gap-3 text-xs uppercase tracking-[0.14em] text-bark-300">
+                      <CalendarDays className="h-3.5 w-3.5" aria-hidden="true" />
+                      <time dateTime={item.date}>
+                        {new Date(item.date).toLocaleDateString('pl-PL', {
+                          day: '2-digit',
+                          month: 'long',
+                          year: 'numeric',
+                        })}
+                      </time>
+                      <span className="rounded-full bg-forest-400/10 px-2 py-0.5 text-[10px] text-forest-400">
+                        {item.category}
+                      </span>
+                    </div>
+                    <h3 className="mt-3 font-serif text-xl leading-tight text-bark-700">
+                      {item.title}
+                    </h3>
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-bark-500">
+                      {item.excerpt}
+                    </p>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <a
+              href={SITE.facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary"
+            >
+              Więcej na Facebooku
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </a>
           </div>
         </div>
       </section>

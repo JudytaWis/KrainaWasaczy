@@ -61,8 +61,15 @@ export default function GalleryPage() {
             {GALLERY_VIDEOS.map((video) => (
               <article key={video.title} className="card-paper overflow-hidden">
                 <div className="relative aspect-video w-full bg-bark-700">
-                  {video.youtubeId ? (
-                    // Lazy-loaded YouTube iframe na domenie no-cookies + sandboxowany
+                  {video.localSrc ? (
+                    <video
+                      src={video.localSrc}
+                      controls
+                      preload="metadata"
+                      playsInline
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
+                  ) : video.youtubeId ? (
                     <iframe
                       src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}?rel=0`}
                       title={video.title}
@@ -73,14 +80,11 @@ export default function GalleryPage() {
                       className="absolute inset-0 h-full w-full"
                     />
                   ) : (
-                    // Placeholder — czeka na ID filmu
                     <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-cream-100/80">
                       <Film className="h-10 w-10 text-gold" aria-hidden="true" />
                       <span className="px-4 text-center text-xs uppercase tracking-[0.18em]">
                         Film wkrótce
                       </span>
-                      {/* TODO: po nagraniu — wgraj film na YouTube i wpisz `youtubeId` w lib/placeholders.ts.
-                          Alternatywnie: wgraj .mp4 do /public/videos/ i podmień iframe na <video src=...>. */}
                     </div>
                   )}
                 </div>

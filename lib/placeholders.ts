@@ -25,8 +25,8 @@ export const SITE = {
   // że hodowla mieści się w Bibicach, a odbiór szczeniąt odbywa się w Krakowie.
   street: 'Bibice',
   pickupCity: 'Kraków',
-  // Bibice (gmina Zielonki) — przybliżone współrzędne
-  geo: { lat: 50.1247, lng: 19.9486 },
+  // Bibice (gmina Zielonki) — koordynaty z Facebook Page
+  geo: { lat: 50.13319, lng: 19.96707 },
   facebookUrl:
     'https://www.facebook.com/p/Kraina-W%C4%85saczy-Hodowla-wy%C5%BC%C5%82a-czeskiego-Fousek-FCI-61557084189380/',
   registration: 'ZKwP / FCI',
@@ -190,8 +190,29 @@ export const LITTERS: readonly Litter[] = [
     description:
       'Pierwszy miot Krainy Wąsaczy. Wszystkie szczenięta trafiły do swoich nowych, troskliwych domów.',
     longDescription:
-      'Z ogromną dumą i nie skrywaną radością powitaliśmy nasz pierwszy miot — małe wyżełki, które przyszły na świat 26 marca 2024 roku. Wszystkie maluchy czuły się dobrze od pierwszych dni, a młoda mama z dużym apetytem i troskliwie opiekowała się swoim potomstwem. Miot A otworzył historię naszej hodowli — szczenięta są dziś w nowych domach.',
-    galleryCount: 6,
+      'Z ogromną dumą i nie skrywaną radością powitaliśmy nasz pierwszy miot — małe wyżełki, które przyszły na świat 26 marca 2024 roku. Wszystkie maluchy czuły się dobrze od pierwszych dni, a młoda mama z dużym apetytem i troskliwie opiekowała się swoim potomstwem. Miot A otworzył historię naszej hodowli — szczenięta są dziś w nowych domach i regularnie odwiedzają nas w naszych wyprawach do lasu.',
+    notableLittermates: [
+      {
+        name: 'Atena z Krainy Wąsaczy',
+        desc: 'Suczka z miotu A, dziś dorosła i pracująca w łowisku. Regularnie spotyka się z rodzicami podczas naszych wspólnych wypraw do lasu — miłość, natura i więź między psem a człowiekiem w czystej postaci.',
+      },
+    ],
+    galleryCount: 12,
+    coverImage: '/images/miot-a/2024-05-28_122140646666236139.avif',
+    images: [
+      '/images/miot-a/2024-05-28_122140646666236139.avif',
+      '/images/miot-a/2024-05-28_122140646420236139.avif',
+      '/images/miot-a/2024-05-25_122139798416236139.avif',
+      '/images/miot-a/2024-05-25_122139798374236139.avif',
+      '/images/miot-a/2024-05-25_122139798332236139.avif',
+      '/images/miot-a/2024-05-25_122139798290236139.avif',
+      '/images/miot-a/2024-05-21_122138649590236139.avif',
+      '/images/miot-a/2024-05-21_122138649548236139.avif',
+      '/images/miot-a/2024-05-10_122135346062236139.avif',
+      '/images/miot-a/2024-05-10_122135346008236139.avif',
+      '/images/miot-a/2024-05-10_122135346002236139.avif',
+      '/images/miot-a/2024-05-10_122135345906236139.avif',
+    ],
   },
   {
     id: 'b',
@@ -215,8 +236,16 @@ export const LITTERS: readonly Litter[] = [
         name: 'Basta z Krainy Wąsaczy',
         desc: 'Suczka o najjaśniejszym umaszczeniu z całego miotu — klasyczny brązowy deresz. Odważna, ciekawska, towarzyska — od pierwszych tygodni wyróżniała się charakterem.',
       },
+      {
+        name: 'Berta z Krainy Wąsaczy',
+        desc: 'Młody wyżeł czeski z ogromnym potencjałem łowieckim. Już teraz pokazuje świetny nos i silny temperament prawdziwego psa pracującego. Łączy odwagę z naturalną legawością.',
+      },
+      {
+        name: 'Biegun z Krainy Wąsaczy',
+        desc: 'Pies z miotu B w nowym domu, prawdziwy partner w terenie. Symbol tego do czego dążymy w hodowli — pies pracujący i kochający towarzysz w jednym.',
+      },
     ],
-    galleryCount: 8,
+    galleryCount: 16,
     coverImage: '/images/miot-b/miot-b-1.avif',
     images: [
       '/images/miot-b/miot-b-1.avif',
@@ -227,6 +256,14 @@ export const LITTERS: readonly Litter[] = [
       '/images/miot-b/miot-b-6.avif',
       '/images/miot-b/miot-b-7.avif',
       '/images/miot-b/miot-b-8.avif',
+      '/images/miot-b/2025-07-24_122239735526236139.avif',
+      '/images/miot-b/2025-07-23_122239564844236139.avif',
+      '/images/miot-b/2025-07-23_122239564832236139.avif',
+      '/images/miot-b/2025-07-23_122239564760236139.avif',
+      '/images/miot-b/2025-07-23_122239564748236139.avif',
+      '/images/miot-b/2025-07-23_122239564712236139.avif',
+      '/images/miot-b/2025-07-21_122239129304236139.avif',
+      '/images/miot-b/2025-07-21_122239129286236139.avif',
     ],
   },
   {
@@ -245,7 +282,22 @@ export const LITTERS: readonly Litter[] = [
       'Planowany miot — rezerwacje otwarte. Jeśli szukasz wyżła czeskiego do łowiectwa, do aktywnej rodziny, jako partnera w terenie i na co dzień — to miot dla Ciebie.',
     longDescription:
       'Jeśli szukasz wyżła czeskiego: do łowiectwa, do aktywnej rodziny, jako partnera w terenie i na co dzień, to nasz miot „C" może być właśnie dla Ciebie. Ofertę naszą kierujemy do osób poszukujących aktywnych psów pracujących — myśliwych, miłośników sportów kynologicznych, rodzin gotowych zapewnić psu dużo ruchu i pracy umysłowej. Reproduktor wybierany pod miot — informacja zostanie opublikowana po zatwierdzeniu krycia.',
-    galleryCount: 4,
+    galleryCount: 12,
+    coverImage: '/images/miot-c-przygotowania/2026-03-03_122280949208236139.avif',
+    images: [
+      '/images/miot-c-przygotowania/2026-03-26_122284950116236139.avif',
+      '/images/miot-c-przygotowania/2026-03-26_122284950104236139.avif',
+      '/images/miot-c-przygotowania/2026-03-26_122284950092236139.avif',
+      '/images/miot-c-przygotowania/2026-03-03_122280949208236139.avif',
+      '/images/miot-c-przygotowania/2026-03-03_122280949184236139.avif',
+      '/images/miot-c-przygotowania/2026-03-03_122280949106236139.avif',
+      '/images/miot-c-przygotowania/2026-03-03_122280949088236139.avif',
+      '/images/miot-c-przygotowania/2026-03-03_122280949034236139.avif',
+      '/images/miot-c-przygotowania/2026-03-03_122280949010236139.avif',
+      '/images/miot-c-przygotowania/2026-03-03_122280948932236139.avif',
+      '/images/miot-c-przygotowania/2026-03-03_122280948914236139.avif',
+      '/images/miot-c-przygotowania/2026-02-09_122277060122236139.avif',
+    ],
     ctaText: 'Zarezerwuj szczeniaka',
   },
 ] as const;
@@ -313,25 +365,36 @@ export type GalleryItem = {
  * `placeholder-frame` bo plik nie istnieje).
  */
 export const GALLERY: readonly GalleryItem[] = [
-  // Rodzice — Nancy
-  { src: '/images/galeria/nancy-1.jpg', alt: 'Nancy ze Staropleských luk — portret', category: 'rodzice' },
-  { src: '/images/galeria/nancy-2.jpg', alt: 'Nancy w łowisku', category: 'rodzice', caption: 'Praca w polu' },
-  { src: '/images/galeria/nancy-3.jpg', alt: 'Nancy — aport z wody', category: 'rodzice' },
-  // Rodzice — Eros
-  { src: '/images/galeria/eros-1.jpg', alt: 'Eros z Vallis Baptismi — portret', category: 'rodzice' },
-  { src: '/images/galeria/eros-2.jpg', alt: 'Eros w terenie', category: 'rodzice' },
-  // Miot A
-  { src: '/images/galeria/miot-a-1.jpg', alt: 'Miot A — szczenięta w pierwszych tygodniach', category: 'mioty' },
-  { src: '/images/galeria/miot-a-2.jpg', alt: 'Miot A — zabawa', category: 'mioty' },
-  { src: '/images/galeria/miot-a-3.jpg', alt: 'Miot A — pierwsze wyjście', category: 'mioty' },
-  // Miot B (zdjęcia z 27.05.2025)
-  { src: '/images/miot-b/miot-b-1.avif', alt: 'Miot B — Nancy ze szczeniętami', category: 'mioty' },
-  { src: '/images/miot-b/miot-b-2.avif', alt: 'Miot B — szczenięta', category: 'mioty' },
-  { src: '/images/miot-b/miot-b-3.avif', alt: 'Miot B — pierwsze tygodnie', category: 'mioty' },
-  { src: '/images/miot-b/miot-b-4.avif', alt: 'Miot B — szczenięta razem', category: 'mioty' },
-  { src: '/images/miot-b/miot-b-5.avif', alt: 'Miot B — Basta i rodzeństwo', category: 'mioty', caption: 'Basta — brązowy deresz' },
-  { src: '/images/miot-b/miot-b-6.avif', alt: 'Miot B — portret szczenięcia', category: 'mioty' },
-  { src: '/images/miot-b/miot-b-7.avif', alt: 'Miot B — zabawa', category: 'mioty' },
+  // ── Mioty ──
+  // Miot A (marzec-maj 2024)
+  { src: '/images/miot-a/2024-05-28_122140646666236139.avif', alt: 'Miot A — podrośnięte szczenięta', category: 'mioty', caption: 'Miot A · maj 2024' },
+  { src: '/images/miot-a/2024-05-25_122139798416236139.avif', alt: 'Miot A — odkrywanie świata', category: 'mioty' },
+  { src: '/images/miot-a/2024-05-10_122135346062236139.avif', alt: 'Miot A — szczenięta razem', category: 'mioty' },
+  { src: '/images/miot-a/2024-04-16_122127260768236139.avif', alt: 'Miot A — w pierwszych tygodniach', category: 'mioty' },
+  // Miot B (maj-lipiec 2025) — Basta, Berta
+  { src: '/images/miot-b/miot-b-1.avif', alt: 'Miot B — szczenięta', category: 'mioty', caption: 'Miot B · maj 2025' },
+  { src: '/images/miot-b/2025-07-23_122239564844236139.avif', alt: 'Basta z Krainy Wąsaczy', category: 'mioty', caption: 'Basta — brązowy deresz' },
+  { src: '/images/miot-b/2025-07-24_122239735526236139.avif', alt: 'Miot B — Berta', category: 'mioty', caption: 'Berta — młoda łowczyni' },
+  { src: '/images/miot-b/miot-b-5.avif', alt: 'Miot B — kolaż szczeniąt', category: 'mioty' },
+  // Miot C — zdjęcia rodziców i przygotowań do miotu
+  { src: '/images/miot-c-przygotowania/2026-03-26_122284950116236139.avif', alt: 'Przygotowania do miotu C', category: 'mioty', caption: 'Miot C · planowany' },
+  { src: '/images/miot-c-przygotowania/2026-03-03_122280949208236139.avif', alt: 'Wiosna 2026 — Nancy i Eros', category: 'mioty' },
+  // ── Rodzice ──
+  { src: '/images/inne/2025-09-24_122252410712236139.avif', alt: 'Nancy ze Staropleských luk — portret', category: 'rodzice', caption: 'Nancy — nasza suka hodowlana' },
+  { src: '/images/inne/2025-09-24_122252410640236139.avif', alt: 'Nancy w terenie', category: 'rodzice' },
+  { src: '/images/inne/2025-09-24_122252410568236139.avif', alt: 'Nancy — portret', category: 'rodzice' },
+  { src: '/images/inne/2025-08-29_122247499040236139.avif', alt: 'Eros z Vallis Baptismi', category: 'rodzice', caption: 'Eros — reproduktor miotu B' },
+  { src: '/images/inne/2025-08-29_122247499028236139.avif', alt: 'Eros — eksterier', category: 'rodzice' },
+  { src: '/images/inne/2025-08-29_122247498992236139.avif', alt: 'Eros — chwila skupienia', category: 'rodzice' },
+  // ── Praca w polu / codzienne życie ──
+  { src: '/images/inne/2025-12-31_122270160098236139.avif', alt: 'Praca w terenie — koniec 2025', category: 'praca', caption: 'Nowy Rok 2026 — nowe tropy' },
+  { src: '/images/inne/2025-12-31_122270160050236139.avif', alt: 'Wyprawa do lasu', category: 'praca' },
+  { src: '/images/inne/2025-12-31_122270160008236139.avif', alt: 'Polowanie w lesie', category: 'praca' },
+  { src: '/images/inne/2025-09-24_122252410490236139.avif', alt: 'Berta w pracy', category: 'praca' },
+  { src: '/images/inne/2025-09-24_122252410424236139.avif', alt: 'Dorastający wyżeł czeski', category: 'praca' },
+  { src: '/images/inne/2025-09-24_122252410346236139.avif', alt: 'Praca w polu', category: 'praca' },
+  { src: '/images/inne/2025-09-24_122252410310236139.avif', alt: 'Codzienność hodowli', category: 'praca' },
+  { src: '/images/miot-c-przygotowania/2026-03-03_122280949184236139.avif', alt: 'Wiosenne słońce', category: 'praca', caption: 'Pierwsza wiosna 2026' },
   { src: '/images/miot-b/miot-b-8.avif', alt: 'Miot B — odpoczynek', category: 'mioty' },
   // Praca w polu
   { src: '/images/galeria/praca-1.jpg', alt: 'Praca w polu — wystawianie', category: 'praca' },
@@ -353,25 +416,120 @@ export const GALLERY: readonly GalleryItem[] = [
 export type VideoItem = {
   title: string;
   description: string;
-  /** YouTube video ID, np. "dQw4w9WgXcQ" — null oznacza placeholder */
-  youtubeId: string | null;
+  /** Ścieżka do lokalnego pliku MP4 (preferowane) */
+  localSrc?: string;
+  /** YouTube video ID — alternatywnie, jeśli filmy są na YT */
+  youtubeId?: string | null;
+  /** Data publikacji na FB */
+  date?: string;
 };
 
 export const GALLERY_VIDEOS: readonly VideoItem[] = [
   {
-    title: 'Praca Nancy w polu',
-    description: 'Wystawianie i aport z lądu — Nancy ze Staropleských luk w łowisku.',
-    youtubeId: null, // TODO: ID filmu YouTube po nagraniu / upload
+    title: 'Atena z miotu A spotyka rodziców',
+    description: 'Atena z Krainy Wąsaczy — szczenię z pierwszego miotu, dziś dorosła — spotyka swoich rodziców podczas wspólnej wyprawy do lasu. Miłość, natura i więź pomiędzy psem a człowiekiem.',
+    localSrc: '/videos/2026-01-25.mp4',
+    date: '2026-01-25',
   },
   {
-    title: 'Aport z wody',
-    description: 'Wyżeł czeski w pracy nad wodą — naturalny instynkt aportowania.',
-    youtubeId: null,
+    title: 'Nauka siadania',
+    description: 'Praca z młodym psem z miotu B — pierwsza komenda, pierwsze sukcesy.',
+    localSrc: '/videos/2025-09-19.mp4',
+    date: '2025-09-19',
   },
   {
-    title: 'Szczenięta miotu B',
-    description: 'Pierwsze tygodnie z Bastą i jej rodzeństwem.',
-    youtubeId: null,
+    title: 'Bertunia na spacerku z mamą',
+    description: 'Berta z Krainy Wąsaczy na spacerze z Nancy — typowa scena z naszej codzienności.',
+    localSrc: '/videos/2025-09-14.mp4',
+    date: '2025-09-14',
+  },
+  {
+    title: 'Miot B — chwila beztroski',
+    description: 'Szczenięta miotu B w zabawie — lipiec 2025.',
+    localSrc: '/videos/2025-07-22.mp4',
+    date: '2025-07-22',
+  },
+  {
+    title: 'Pierwsze kroki',
+    description: 'Szczeniaki miotu B — pierwsze tygodnie życia.',
+    localSrc: '/videos/2025-08-03.mp4',
+    date: '2025-08-03',
+  },
+] as const;
+
+// ────────────────────────────────────────────────────────────────────────────
+// AKTUALNOŚCI — wybrane posty z Facebooka
+// ────────────────────────────────────────────────────────────────────────────
+
+export type NewsItem = {
+  id: string;
+  date: string;
+  title: string;
+  excerpt: string;
+  body?: string;
+  category: 'miot' | 'zdrowie' | 'wydarzenia' | 'rasa' | 'codzienność';
+  fbUrl?: string;
+  image?: string;
+};
+
+export const NEWS: readonly NewsItem[] = [
+  {
+    id: 'kleszcze-bravecto',
+    date: '2026-03-26',
+    title: 'Wiosna = czas na ochronę przed kleszczami',
+    excerpt: 'Z nadejściem cieplejszych dni wracają kleszcze — realne zagrożenie dla zdrowia naszych psów. Z naszego doświadczenia najlepiej sprawdzają się tabletki Bravecto.',
+    body: 'Kleszcze mogą przenosić groźne choroby (babeszjoza, borelioza, anaplazmoza), nieleczone prowadzą do poważnych powikłań. W naszej hodowli stosujemy tabletki Bravecto — działają nawet do 12 tygodni, skutecznie eliminują kleszcze i pchły, są wygodną formą (brak problemu z kąpielą czy deszczem). Dla aktywnych psów (las, łąki, woda) tabletki są szczególnie polecane — działają od środka i nie zmywają się. Zabezpieczenie warto rozpocząć już na początku wiosny.',
+    category: 'zdrowie',
+    image: '/images/miot-c-przygotowania/2026-03-26_122284950116236139.avif',
+  },
+  {
+    id: 'atena-w-lesie',
+    date: '2026-01-25',
+    title: 'Dla takich chwil założyliśmy naszą hodowlę',
+    excerpt: 'Atena z miotu „A" spotyka swoich rodziców podczas wspólnej wyprawy do lasu. Miłość, natura i więź między psem a człowiekiem.',
+    category: 'codzienność',
+    image: '/images/inne/2025-12-31_122270160098236139.avif',
+  },
+  {
+    id: 'miot-c-rezerwacje',
+    date: '2026-02-09',
+    title: 'Przyszły miot „C" — ruszają zapisy',
+    excerpt: 'Jeśli szukasz wyżła czeskiego do łowiectwa, do aktywnej rodziny, jako partnera w terenie i na co dzień — to nasz miot „C" może być właśnie dla Ciebie.',
+    body: 'Zapraszamy do kontaktu w wiadomości prywatnej — chętnie opowiemy więcej o planowanym skojarzeniu i warunkach rezerwacji.',
+    category: 'miot',
+    image: '/images/miot-c-przygotowania/2026-02-09_122277060122236139.avif',
+  },
+  {
+    id: 'berta',
+    date: '2025-09-24',
+    title: 'Berta — młody wyżeł czeski z potencjałem łowieckim',
+    excerpt: 'Szczeniak z miotu B z ogromnym potencjałem łowieckim — już teraz pokazuje świetny nos i silny temperament prawdziwego psa pracującego.',
+    category: 'miot',
+    image: '/images/inne/2025-09-24_122252410712236139.avif',
+  },
+  {
+    id: 'basta-prezentacja',
+    date: '2025-07-23',
+    title: 'Basta z Krainy Wąsaczy — jasna perełka z miotu B',
+    excerpt: 'Urodzona 28 maja 2025, 8-tygodniowa suczka wyżła czeskiego (Český fousek). Najjaśniejsze umaszczenie z całego miotu — klasyczny brązowy deresz.',
+    body: 'Z charakteru: odważna, ciekawska i bardzo towarzyska. Już teraz pokazuje ogromny potencjał — zarówno jako pies użytkowy, jak i oddana towarzyszka domowa. Rodowód Basty to przemyślane połączenie dwóch znakomitych linii: ojciec Eros z Vallis Baptismi (pracujący pies z doskonałym instynktem łowieckim) i matka Nancy ze Staropleských luk (suczka o wyjątkowej psychice).',
+    category: 'miot',
+    image: '/images/miot-b/2025-07-23_122239564844236139.avif',
+  },
+  {
+    id: 'hunting-expo',
+    date: '2025-05-04',
+    title: 'Hunting Expo Kraków',
+    excerpt: 'Mieliśmy okazję uczestniczyć w wystawie Hunting Expo w Krakowie. Spotkania, rozmowy z myśliwymi, pasjonatami i hodowcami.',
+    category: 'wydarzenia',
+  },
+  {
+    id: 'cechy-psow-mysliwskich',
+    date: '2024-05-04',
+    title: 'Co musisz wiedzieć o psach myśliwskich',
+    excerpt: 'Cechy psa myśliwskiego: zrównoważony, nie agresywny, inteligentny. Wyżeł czeski to UNIWERSALNY pies — silny, wytrzymały, łagodny i łatwy do ułożenia.',
+    body: 'Cechy psów myśliwskich: ZRÓWNOWAŻONE — nie boją się strzału ani niczego innego. NIE AGRESYWNE — myśliwy nie poluje sam, pies musi oddać zwierzynę, nie zjeść. INTELIGENTNE — odróżniają czas pracy od czasu odpoczynku; w domu bawią się z dziećmi i uwielbiają pieszczoty.\n\nWyżeł czeski przez naszych sąsiadów stworzony został jako UNIWERSALNY pies na polowania. Na polowaniu pracuje jako: APORTER (przynosi strzelone ptactwo), GOŃCZY (wypłasza i goni zwierzynę), LEGAWIEC (poluje na ptactwo), TROPOWIEC (poszukuje rannej zwierzyny — wyżły mają doskonały węch), PŁOCHACZ (wypłasza ptaki, wchodzi w gęste szuwary).\n\nWymagają RUCHU (godzina dziennie wybiegania) i ROZRYWKI (zmienność — raz spacer na polu, raz w lesie, bieganie z rowerem, pływanie).',
+    category: 'rasa',
   },
 ] as const;
 
