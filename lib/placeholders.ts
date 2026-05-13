@@ -102,9 +102,9 @@ export const MAMA: Dog = {
     'Międzynarodowa Wystawa Psów Rasowych — Wrocław 2024: Zwycięzca Rasy. Finał w kategorii „Najlepsza Para" razem z Erosem.',
   ],
   character:
-    'Zrównoważona, oddana, łagodna w domu i pełna pasji w pracy. Doskonale współpracuje z człowiekiem — łączy w sobie wrodzony instynkt łowiecki z silną więzią rodzinną. Z dzieci i innych zwierząt potrafi cieszyć się tak samo jak z dnia spędzonego w łowisku.',
+    'Zrównoważona, oddana, łagodna w domu i pełna pasji w pracy. Doskonale współpracuje z człowiekiem — łączy w sobie wrodzony instynkt łowiecki z silną więzią rodzinną. Z dzieci i innych zwierząt potrafi cieszyć się tak samo jak z dnia spędzonego w łowisku. W domu nazywamy ją czule „Księżniczką" — wspaniała mama dla swoich szczeniąt, troskliwa, opiekuńcza, z dużym apetytem i jeszcze większym sercem.',
   description:
-    'Aria to fundament naszej hodowli — duża, silna suczka o brązowym dereszu, z wyjątkową psychiką, naturalnym talentem użytkowym i silnym przywiązaniu do człowieka. W łowisku pracuje aktywnie: wystawia, aportuje z lądu i z wody, świetnie tropi. Pełne imię hodowlane: Aria (Nancy ze Staropleských luk) — pochodzi z czeskiej hodowli o sprawdzonych pracujących liniach. W 2024 roku zdobyła tytuł Zwycięzcy Rasy na Międzynarodowej Wystawie Psów we Wrocławiu.',
+    'Aria to fundament naszej hodowli — duża, silna suczka o brązowym dereszu, z wyjątkową psychiką, naturalnym talentem użytkowym i silnym przywiązaniu do człowieka. Wraz z Erosem tworzy naszą „najlepszą parę" — i w domu, i na ringu wystawowym, i w łowisku. Razem chodzą z nami w teren, polują, wystawiają, aportują z lądu i z wody, tropią. Pełne imię hodowlane: Aria (Nancy ze Staropleských luk) — pochodzi z czeskiej hodowli o sprawdzonych pracujących liniach. W 2024 roku zdobyła tytuł Zwycięzcy Rasy na Międzynarodowej Wystawie Psów we Wrocławiu, a wspólnie z Erosem znalazła się w finale w kategorii „Najlepsza Para". Aria to matka miotu A (marzec 2024) i miotu B (maj 2025) — naszych pierwszych pokoleń wyżłów czeskich z Krainy Wąsaczy. Modesta codziennie biega z nią po lasach i łąkach Bibic — Aria po prostu kocha ruch i wodę.',
   livesAtKennel: true,
   galleryCount: 6,
   pedigreePdfPath: '/documents/aria-rodowod.pdf',
@@ -148,9 +148,9 @@ export const TATA: Dog = {
     'Międzynarodowa Wystawa Psów Wrocław 2024 — Finał w kategorii „Najlepsza Para" (z Arią).',
   ],
   character:
-    'Piękny i pracujący pies — zrównoważony, z doskonałym instynktem łowieckim i świetnym eksterierem. Pewny siebie, ale nie agresywny; w pracy energiczny i skupiony. Razem z Arią tworzą "psy na medal".',
+    'Piękny i pracujący pies — zrównoważony, z doskonałym instynktem łowieckim i świetnym eksterierem. Pewny siebie, ale nie agresywny; w pracy energiczny i skupiony. Razem z Arią tworzą „psy na medal" — i w łowisku, i na ringu. „Dumny ojciec" miotu B, doskonale współpracujący z Adamem podczas polowań.',
   description:
-    'Eros z Vallis Baptismi — siwy pies z brązową głową, partner Arii w hodowli i w łowisku. Łączy eksterier wystawowy z prawdziwym charakterem psa pracującego — daje potomstwo o silnym instynkcie łowieckim i zrównoważonej psychice. Wspólnie z Arią pracują w polu i lesie — są naszą "najlepszą parą", zarówno w domu jak i na wystawach.',
+    'Eros z Vallis Baptismi to siwy pies z brązową głową — partner Arii w hodowli, w łowisku i w domu. Łączy eksterier wystawowy z prawdziwym charakterem psa pracującego: razem z Adamem chodzi na polowania, tropi, aportuje, wystawia. Mieszka u nas, na co dzień, jest pełnoprawnym członkiem rodziny. Reproduktor miotu B (maj 2025) — Eros dał potomstwo o silnym instynkcie łowieckim, zrównoważonej psychice i pięknym eksterierze. Jego osiągnięcia wystawowe to m.in. Zwycięzca Rasy z oceną Doskonałą na XXVII Międzynarodowej Wystawie Psów Rasowych CACIB w Krakowie oraz finał w kategorii „Najlepsza Para" razem z Arią na Międzynarodowej Wystawie Psów we Wrocławiu 2024. To pies do biegania po lesie, pływania w jeziorach i wieczornych drzemek na kanapie — w jednym.',
   livesAtKennel: true,
   galleryCount: 6,
   pedigreePdfPath: '/documents/eros-rodowod.pdf',
