@@ -38,16 +38,16 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-bark-100/60 bg-cream-50/95 backdrop-blur supports-[backdrop-filter]:bg-cream-50/80">
-      <div className="container-wide flex h-20 items-center justify-between">
+      <div className="container-wide flex h-16 items-center justify-between gap-4">
         <Link
           href="/"
-          className="group flex flex-col leading-tight"
+          className="group flex flex-col leading-none"
           aria-label={`${SITE.name} — strona główna`}
         >
           <span className="font-serif text-xl text-bark-700 transition group-hover:text-forest-400 sm:text-2xl">
             {SITE.name}
           </span>
-          <span className="text-[10px] uppercase tracking-[0.22em] text-bark-300 sm:text-xs">
+          <span className="mt-1 hidden text-[9px] uppercase tracking-[0.18em] text-bark-300 xl:block">
             {SITE.shortDescription}
           </span>
         </Link>

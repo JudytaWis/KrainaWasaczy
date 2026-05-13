@@ -67,10 +67,10 @@ export default function HomePage() {
 
           <div className="lg:col-span-5">
             <div className="grid grid-cols-2 gap-3">
-              <div className="relative col-span-2 aspect-[16/10] w-full overflow-hidden rounded-lg ring-1 ring-gold/30 shadow-2xl">
+              <div className="relative col-span-2 aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-gold/30 shadow-2xl">
                 <Image
-                  src="/images/miot-b/miot-b-1.avif"
-                  alt="Aria ze szczeniętami z miotu B — Kraina Wąsaczy"
+                  src="/images/miot-a/2024-04-03_122122069118236139.avif"
+                  alt="Aria ze szczeniętami — Kraina Wąsaczy"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 40vw"
