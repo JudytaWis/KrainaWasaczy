@@ -10,6 +10,7 @@ type NavItem = { label: string; href: string; children?: NavChild[] };
 
 const NAV_ITEMS: NavItem[] = [
   { label: 'Strona główna', href: '/' },
+  { label: 'O nas', href: '/o-nas' },
   {
     label: 'Rodzice',
     href: '/rodzice',

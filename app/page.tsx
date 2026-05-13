@@ -66,18 +66,39 @@ export default function HomePage() {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg ring-1 ring-gold/30 shadow-2xl">
-              <Image
-                src="/images/inne/2025-12-31_122270160098236139.avif"
-                alt="Aria i Eros — wyżły czeskie z Krainy Wąsaczy"
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover object-center"
-              />
+            <div className="grid grid-cols-2 gap-3">
+              <div className="relative col-span-2 aspect-[16/10] w-full overflow-hidden rounded-lg ring-1 ring-gold/30 shadow-2xl">
+                <Image
+                  src="/images/miot-b/miot-b-1.avif"
+                  alt="Aria ze szczeniętami z miotu B — Kraina Wąsaczy"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bark-700/40 via-transparent to-transparent" />
+              </div>
+              <div className="relative aspect-square overflow-hidden rounded-lg ring-1 ring-gold/30 shadow-xl">
+                <Image
+                  src="/images/inne/2025-12-31_122270160098236139.avif"
+                  alt="Aria i Eros — pies hodowlany"
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 20vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative aspect-square overflow-hidden rounded-lg ring-1 ring-gold/30 shadow-xl">
+                <Image
+                  src="/images/miot-a/2024-05-25_122139798416236139.avif"
+                  alt="Szczenięta z miotu A"
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 20vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
             <p className="mt-3 text-center text-xs uppercase tracking-[0.18em] text-gold/80">
-              Aria & Eros — nasze psy hodowlane
+              Aria & Eros · szczenięta · codzienność hodowli
             </p>
           </div>
         </div>

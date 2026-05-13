@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import type { Dog } from '@/lib/placeholders';
 
@@ -6,10 +7,6 @@ type DogCardProps = {
   dog: Dog;
 };
 
-/**
- * Karta promująca psa hodowlanego (rodzica).
- * Używa CSS placeholder, dopóki zdjęcia nie zostaną wgrane do /public/images.
- */
 export function DogCard({ dog }: DogCardProps) {
   const href = `/rodzice/${dog.slug}`;
 
@@ -17,15 +14,24 @@ export function DogCard({ dog }: DogCardProps) {
     <article className="card-paper group flex flex-col overflow-hidden">
       <Link
         href={href}
-        className="block aspect-[4/5] w-full overflow-hidden"
+        className="relative block aspect-[4/5] w-full overflow-hidden"
         aria-label={`${dog.role} — ${dog.fullName}, przejdź do podstrony`}
       >
-        <div className="placeholder-frame flex h-full w-full items-center justify-center">
-          {/* TODO: podmienić na <Image src={`/images/${dog.slug}/portrait.jpg`} .../> */}
-          <span className="px-6 text-center text-sm uppercase tracking-[0.18em]">
-            Zdjęcie {dog.role.toLowerCase()}
-          </span>
-        </div>
+        {dog.portraitImage ? (
+          <Image
+            src={dog.portraitImage}
+            alt={`${dog.name} — ${dog.role.toLowerCase()}`}
+            fill
+            sizes="(max-width: 640px) 100vw, 50vw"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          />
+        ) : (
+          <div className="placeholder-frame flex h-full w-full items-center justify-center">
+            <span className="px-6 text-center text-sm uppercase tracking-[0.18em]">
+              Zdjęcie {dog.role.toLowerCase()}
+            </span>
+          </div>
+        )}
       </Link>
       <div className="flex flex-1 flex-col p-6">
         <p className="eyebrow">{dog.role}</p>

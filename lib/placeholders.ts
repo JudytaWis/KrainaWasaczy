@@ -68,6 +68,10 @@ export type Dog = {
   livesAtKennel: boolean;
   galleryCount: number;
   pedigreePdfPath: string;
+  /** Główne zdjęcie psa — używane na kartach i hero podstrony */
+  portraitImage?: string;
+  /** Galeria zdjęć psa — używana na podstronie /rodzice/[slug] */
+  galleryImages?: readonly string[];
 };
 
 export const MAMA: Dog = {
@@ -104,6 +108,15 @@ export const MAMA: Dog = {
   livesAtKennel: true,
   galleryCount: 6,
   pedigreePdfPath: '/documents/aria-rodowod.pdf',
+  portraitImage: '/images/inne/2025-12-31_122270160098236139.avif',
+  galleryImages: [
+    '/images/inne/2025-12-31_122270160098236139.avif',
+    '/images/inne/2025-12-31_122270160050236139.avif',
+    '/images/inne/2025-09-24_122252410712236139.avif',
+    '/images/inne/2025-08-29_122247499040236139.avif',
+    '/images/miot-c-przygotowania/2026-03-03_122280949208236139.avif',
+    '/images/miot-c-przygotowania/2026-03-03_122280949184236139.avif',
+  ],
 };
 
 export const TATA: Dog = {
@@ -141,6 +154,15 @@ export const TATA: Dog = {
   livesAtKennel: true,
   galleryCount: 6,
   pedigreePdfPath: '/documents/eros-rodowod.pdf',
+  portraitImage: '/images/inne/2025-08-29_122247499040236139.avif',
+  galleryImages: [
+    '/images/inne/2025-08-29_122247499040236139.avif',
+    '/images/inne/2025-08-29_122247499028236139.avif',
+    '/images/inne/2025-08-29_122247498992236139.avif',
+    '/images/inne/2025-08-29_122247498890236139.avif',
+    '/images/inne/2025-12-31_122270160008236139.avif',
+    '/images/miot-c-przygotowania/2026-03-03_122280949010236139.avif',
+  ],
 };
 
 export const DOGS: Record<'mama' | 'tata', Dog> = { mama: MAMA, tata: TATA };
