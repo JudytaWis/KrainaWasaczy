@@ -8,7 +8,7 @@ import { SITE, QUOTES } from '@/lib/placeholders';
 
 export const metadata = pageMetadata({
   title: 'O nas',
-  description: `Poznaj naszą rodzinę i historię hodowli ${SITE.name}. Modesta i Artur — pasjonaci wyżła czeskiego, myśliwi, hodowcy z Bibic koło Krakowa.`,
+  description: `Poznaj naszą rodzinę i historię hodowli ${SITE.name}. Modesta Adamczyk i Artur — pasjonaci wyżła czeskiego, myśliwi, hodowcy z Bibic koło Krakowa.`,
   path: '/o-nas',
 });
 
@@ -40,15 +40,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* HISTORIA */}
+      {/* HISTORIA — Modesta z psem */}
       <section className="section">
         <div className="container-wide grid gap-12 lg:grid-cols-2 lg:items-center">
           <Reveal direction="left">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg ring-1 ring-gold/30 shadow-xl">
-              {/* TODO: po wgraniu zdjęcia rodzinnego (Modesta+Artur+Aria+Eros w salonie) podmień */}
               <Image
-                src="/images/inne/2025-12-31_122270160098236139.avif"
-                alt="Aria i Eros — nasze psy hodowlane"
+                src="/images/inne/2025-02-09_122200512524236139.avif"
+                alt="Modesta Adamczyk z psem — Kraina Wąsaczy"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -61,7 +60,8 @@ export default function AboutPage() {
               <p className="eyebrow !text-forest-400">Nasza historia</p>
               <h2 className="heading-lg text-bark-700">Hodowla założona z pasji</h2>
               <p className="leading-relaxed">
-                Jesteśmy <strong className="text-bark-700">Modestą i Arturem</strong>{' '}
+                Jesteśmy{' '}
+                <strong className="text-bark-700">Modestą Adamczyk i Arturem</strong>{' '}
                 — parą myśliwych i miłośników psów rasowych z Bibic koło Krakowa.{' '}
                 <em>Kraina Wąsaczy</em> to nie tylko nazwa hodowli — to wyraz naszej
                 fascynacji wyżłem czeskim szorstkowłosym (Český fousek), mało
@@ -81,6 +81,48 @@ export default function AboutPage() {
               </p>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* RODZINNE ZDJĘCIA — Modesta + Artur + Aria + Eros */}
+      <section className="bg-cream-100">
+        <div className="container-wide py-16">
+          <Reveal>
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="eyebrow">Pies = członek rodziny</p>
+              <h2 className="heading-lg">Razem na co dzień</h2>
+              <p className="mt-4 text-bark-500">
+                Aria i Eros nie żyją w boksach — są z nami w domu, w samochodzie,
+                w terenie. Każda chwila wspólnie spędzona to inwestycja w ich
+                charakter i więź z nami.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+            <Reveal direction="left">
+              <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg shadow-lg ring-1 ring-bark-100/40">
+                <Image
+                  src="/images/inne/2025-02-09_122200512380236139.avif"
+                  alt="Rodzinne zdjęcie — Modesta, Artur, Aria i Eros w salonie"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+            </Reveal>
+            <Reveal direction="right">
+              <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg shadow-lg ring-1 ring-bark-100/40">
+                <Image
+                  src="/images/inne/2025-02-09_122200512470236139.avif"
+                  alt="Z naszymi psami w domu"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 
