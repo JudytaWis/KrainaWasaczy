@@ -80,8 +80,8 @@ export default function HomePage() {
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg ring-1 ring-gold/30 shadow-xl">
                 <Image
-                  src="/images/inne/2025-12-31_122270160098236139.avif"
-                  alt="Aria i Eros — pies hodowlany"
+                  src="/images/miot-a/2024-04-23_122129927174236139.avif"
+                  alt="Szczenięta z miotu A"
                   fill
                   sizes="(max-width: 1024px) 50vw, 20vw"
                   className="object-cover"
