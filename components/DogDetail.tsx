@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { FileText, ArrowLeft, Info } from 'lucide-react';
 import type { Dog } from '@/lib/placeholders';
 
@@ -12,6 +13,9 @@ type DogDetailProps = {
  */
 export function DogDetail({ dog }: DogDetailProps) {
   const gallerySlots = Array.from({ length: dog.galleryCount });
+  const gallery = dog.galleryImages ?? [];
+  const mainImg = dog.portraitImage ?? gallery[0];
+  const restImgs = mainImg && gallery.length > 0 ? gallery.filter((src) => src !== mainImg) : [];
 
   return (
     <>
@@ -63,34 +67,58 @@ export function DogDetail({ dog }: DogDetailProps) {
       {/* GALERIA */}
       <section className="section">
         <div className="container-wide">
-          <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
-            <div className="placeholder-frame col-span-2 row-span-2 aspect-square lg:col-span-2 lg:row-span-2">
-              {/* TODO: <Image src={`/images/${dog.slug}/portrait.jpg`} alt={dog.fullName} fill /> */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="px-6 text-center text-sm uppercase tracking-[0.18em]">
-                  Główne zdjęcie
-                  <br />
-                  <span className="text-xs normal-case tracking-normal text-bark-400">
-                    /images/{dog.slug}/portrait.jpg
-                  </span>
-                </span>
+          {mainImg ? (
+            <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
+              <div className="relative col-span-2 row-span-2 aspect-square overflow-hidden rounded-lg shadow-xl ring-1 ring-gold/30 lg:col-span-2 lg:row-span-2">
+                <Image
+                  src={mainImg}
+                  alt={`${dog.name} — główne zdjęcie`}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 66vw"
+                  className="object-cover"
+                />
               </div>
+              {restImgs.map((src, i) => (
+                <div
+                  key={src}
+                  className="relative aspect-square overflow-hidden rounded-lg ring-1 ring-bark-100/40 transition hover:shadow-lg hover:ring-gold/40"
+                >
+                  <Image
+                    src={src}
+                    alt={`${dog.name} — zdjęcie ${i + 2}`}
+                    fill
+                    sizes="(max-width: 1024px) 50vw, 33vw"
+                    loading="lazy"
+                    className="object-cover transition-transform duration-700 ease-out hover:scale-105"
+                  />
+                </div>
+              ))}
             </div>
-            {gallerySlots.map((_, i) => (
-              <div
-                key={i}
-                className="placeholder-frame aspect-square"
-                aria-label={`Miejsce na zdjęcie ${i + 1}`}
-              >
-                {/* TODO: <Image src={`/images/${dog.slug}/gallery-${i+1}.jpg`} ... /> */}
+          ) : (
+            <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
+              <div className="placeholder-frame col-span-2 row-span-2 aspect-square lg:col-span-2 lg:row-span-2">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-xs uppercase tracking-[0.18em]">
-                    Zdjęcie {i + 1}
+                  <span className="px-6 text-center text-sm uppercase tracking-[0.18em]">
+                    Główne zdjęcie
                   </span>
                 </div>
               </div>
-            ))}
-          </div>
+              {gallerySlots.map((_, i) => (
+                <div
+                  key={i}
+                  className="placeholder-frame aspect-square"
+                  aria-label={`Miejsce na zdjęcie ${i + 1}`}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-xs uppercase tracking-[0.18em]">
+                      Zdjęcie {i + 1}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
