@@ -433,17 +433,21 @@ export const GALLERY: readonly GalleryItem[] = [
   { src: '/images/inne/2025-09-24_122252410346236139.avif', alt: 'Praca w polu', category: 'praca' },
   { src: '/images/inne/2025-09-24_122252410310236139.avif', alt: 'Codzienność hodowli', category: 'praca' },
   { src: '/images/miot-c-przygotowania/2026-03-03_122280949184236139.avif', alt: 'Wiosenne słońce', category: 'praca', caption: 'Pierwsza wiosna 2026' },
+  // Praca w polu / łowisko — z 2025
+  { src: '/images/inne/2025-08-29_122247499040236139.avif', alt: 'Eros w terenie', category: 'praca' },
+  { src: '/images/inne/2025-08-29_122247499028236139.avif', alt: 'Aria w polu', category: 'praca' },
+  { src: '/images/inne/2025-08-29_122247498992236139.avif', alt: 'Praca z psami', category: 'praca' },
+  { src: '/images/miot-a/2024-03-20_122115393518236139.avif', alt: 'Aria i Eros — bieganie w lesie', category: 'praca', caption: 'Idealne psy do biegania' },
+  // ── Wystawy ──
+  { src: '/images/inne/2024-09-14_122169217496236139.avif', alt: 'Eros — Zwycięzca Rasy CACIB Kraków', category: 'wystawy', caption: 'CACIB Kraków — Zwycięzca Rasy' },
+  { src: '/images/inne/2024-09-14_122169217526236139.avif', alt: 'Eros na ringu CACIB', category: 'wystawy' },
+  { src: '/images/inne/2025-01-05_122193377324236139.avif', alt: 'Aria — Międzynarodowa Wystawa Wrocław 2024', category: 'wystawy', caption: 'Wrocław 2024 — Zwycięzca Rasy' },
+  { src: '/images/inne/2025-01-05_122193377360236139.avif', alt: 'Aria na wystawie we Wrocławiu', category: 'wystawy' },
+  { src: '/images/inne/2025-01-05_122193377396236139.avif', alt: 'Aria i Eros — Najlepsza Para', category: 'wystawy', caption: 'Finał: Najlepsza Para' },
+  { src: '/images/inne/2025-01-05_122193377432236139.avif', alt: 'Ring główny — Wrocław 2024', category: 'wystawy' },
+  { src: '/images/miot-b/2025-05-04_122221659986236139.avif', alt: 'Hunting Expo Kraków', category: 'wystawy', caption: 'Hunting Expo Kraków 2025' },
+  { src: '/images/miot-b/2025-05-04_122221659962236139.avif', alt: 'Hunting Expo — stoisko', category: 'wystawy' },
   { src: '/images/miot-b/miot-b-8.avif', alt: 'Miot B — odpoczynek', category: 'mioty' },
-  // Praca w polu
-  { src: '/images/galeria/praca-1.jpg', alt: 'Praca w polu — wystawianie', category: 'praca' },
-  { src: '/images/galeria/praca-2.jpg', alt: 'Aport z lądu', category: 'praca' },
-  { src: '/images/galeria/praca-3.jpg', alt: 'Aport z wody', category: 'praca' },
-  { src: '/images/galeria/praca-4.jpg', alt: 'Tropienie', category: 'praca' },
-  { src: '/images/galeria/praca-5.jpg', alt: 'Praca w lesie', category: 'praca' },
-  { src: '/images/galeria/praca-6.jpg', alt: 'Polowanie — moment skupienia', category: 'praca' },
-  // Wystawy
-  { src: '/images/galeria/wystawa-1.jpg', alt: 'Wystawa — ring', category: 'wystawy' },
-  { src: '/images/galeria/wystawa-2.jpg', alt: 'Wystawa — ocena sędziowska', category: 'wystawy' },
 ] as const;
 
 /**

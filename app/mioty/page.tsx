@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowRight, CalendarDays } from 'lucide-react';
 import { JsonLd } from '@/components/JsonLd';
 import { pageMetadata, breadcrumbJsonLd } from '@/lib/seo';
 import { LITTERS, QUOTES } from '@/lib/placeholders';
@@ -49,13 +50,29 @@ export default function LittersPage() {
           <div className="grid gap-8 lg:grid-cols-3">
             {LITTERS.map((litter) => (
               <article key={litter.id} className="card-paper flex flex-col overflow-hidden">
-                <div className="placeholder-frame aspect-[4/3] w-full">
-                  {/* TODO: <Image src={`/images/miot-${litter.id}/cover.jpg`} ... /> */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="px-6 text-center text-sm uppercase tracking-[0.18em]">
-                      {litter.name}
-                    </span>
-                  </div>
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-cream-200">
+                  {litter.coverImage ? (
+                    <Image
+                      src={litter.coverImage}
+                      alt={`${litter.name} — okładka`}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      loading="lazy"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-bark-400">
+                      <CalendarDays className="h-10 w-10 text-gold" aria-hidden="true" />
+                      <span className="px-6 text-center text-sm uppercase tracking-[0.18em]">
+                        {litter.name}
+                      </span>
+                      {litter.plannedFor && (
+                        <span className="text-xs text-bark-300">
+                          {litter.plannedFor}
+                        </span>
+                      )}
+                    </div>
+                  )}
                 </div>
                 <div className="flex flex-1 flex-col p-6">
                   <div className="flex items-center justify-between">
