@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-cream: #faf7f2;
+    --color-bark-700: #2a1c15;
+    --color-gold: #b08d57;
+  }
+
+  html {
+    color-scheme: light;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-cream-50 text-bark-700 font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif text-bark-700;
+    font-feature-settings: 'liga' 1, 'kern' 1;
+    letter-spacing: -0.01em;
+  }
+
+  /* Visible focus for keyboard users only */
+  :focus-visible {
+    @apply outline-none ring-2 ring-forest-400 ring-offset-2 ring-offset-cream-50;
+  }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .container-prose {
+    @apply mx-auto w-full max-w-4xl px-4 sm:px-6;
+  }
+
+  .container-wide {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+      bg-forest-400 px-6 py-3 text-sm font-medium uppercase tracking-wider
+      text-cream-50 transition hover:bg-forest-500 focus-visible:bg-forest-500;
+  }
+
+  /* CTA wyróżnione — rezerwacja szczeniaka, ważne akcje */
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+      bg-burgundy-500 px-6 py-3 text-sm font-medium uppercase tracking-wider
+      text-cream-50 shadow-sm transition hover:bg-burgundy-600
+      focus-visible:bg-burgundy-600;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+      border border-bark-300 bg-transparent px-6 py-3 text-sm font-medium
+      uppercase tracking-wider text-bark-500 transition hover:bg-bark-50
+      hover:text-bark-700;
+  }
+
+  .section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .eyebrow {
+    @apply mb-3 text-xs font-medium uppercase tracking-[0.18em] text-forest-400;
+  }
+
+  .heading-xl {
+    @apply font-serif text-4xl leading-tight sm:text-5xl lg:text-6xl;
+  }
+
+  .heading-lg {
+    @apply font-serif text-3xl leading-tight sm:text-4xl lg:text-5xl;
+  }
+
+  .heading-md {
+    @apply font-serif text-2xl leading-tight sm:text-3xl;
+  }
+
+  .placeholder-frame {
+    @apply relative overflow-hidden rounded-md bg-gradient-to-br
+      from-bark-100 to-bark-200 text-bark-500;
+  }
+
+  /* Karta papierowa — używana w sekcjach miotów i galerii */
+  .card-paper {
+    @apply rounded-md border border-bark-100 bg-cream-50 transition
+      hover:-translate-y-0.5 hover:border-gold/50 hover:shadow-lg;
+  }
+
+  /* Dekoracyjny separator — cienka linia ze złotym środkiem */
+  .ornament-divider {
+    @apply mx-auto my-6 flex h-px max-w-[180px] items-center justify-center;
+  }
+  .ornament-divider::before,
+  .ornament-divider::after {
+    content: '';
+    @apply h-px flex-1 bg-bark-200/60;
+  }
+  .ornament-divider::before {
+    margin-right: 12px;
+  }
+  .ornament-divider::after {
+    margin-left: 12px;
+  }
+  .ornament-divider > span {
+    @apply inline-block h-1.5 w-1.5 rotate-45 bg-gold;
+  }
+
+  /* Pasek "rezerwacje otwarte" — używany w sekcji hero / aktualny miot */
+  .ribbon-accent {
+    @apply inline-flex items-center gap-2 rounded-full border border-burgundy-500/30
+      bg-burgundy-500/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em]
+      text-burgundy-600;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: var(--color-gold);
+  }
+  .border-gold {
+    border-color: var(--color-gold);
+  }
+  .bg-gold {
+    background-color: var(--color-gold);
+  }
+}
