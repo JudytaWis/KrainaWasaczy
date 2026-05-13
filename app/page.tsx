@@ -143,8 +143,8 @@ export default function HomePage() {
               <p className="eyebrow">Z naszego ogrodu</p>
               <h2 className="heading-lg">Szczenięta w ruchu</h2>
               <p className="mt-4 text-bark-500">
-                Cztery piękne damy z miotu B — wyżełki czeskie szorstkowłose
-                w swoim żywiole, na trawie, w ogrodzie hodowli.
+                Szczeniaki z miotu B — damy i panowie wyżła czeskiego
+                szorstkowłosego w swoim żywiole, na trawie, w ogrodzie hodowli.
               </p>
             </div>
           </Reveal>
