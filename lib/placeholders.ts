@@ -543,7 +543,7 @@ export const NEWS: readonly NewsItem[] = [
     excerpt: 'Jeśli szukasz wyżła czeskiego do łowiectwa, do aktywnej rodziny, jako partnera w terenie i na co dzień — to nasz miot „C" może być właśnie dla Ciebie.',
     body: 'Zapraszamy do kontaktu w wiadomości prywatnej — chętnie opowiemy więcej o planowanym skojarzeniu i warunkach rezerwacji.',
     category: 'miot',
-    image: '/images/miot-c-przygotowania/2026-02-09_122277060122236139.avif',
+    image: '/images/miot-b/miot-b-5.avif',
     fbUrl: 'https://www.facebook.com/permalink.php?id=61557084189380&story_fbid=122277060476236139',
   },
   {
