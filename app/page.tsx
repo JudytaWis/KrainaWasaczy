@@ -135,8 +135,35 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* O HODOWLI */}
+      {/* WIDEO — szczenięta w ogrodzie */}
       <section className="section">
+        <div className="container-wide">
+          <Reveal>
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="eyebrow">Z naszego ogrodu</p>
+              <h2 className="heading-lg">Szczenięta w ruchu</h2>
+              <p className="mt-4 text-bark-500">
+                Cztery piękne damy z miotu B — wyżełki czeskie szorstkowłose
+                w swoim żywiole, na trawie, w ogrodzie hodowli.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={120}>
+            <div className="mx-auto mt-10 max-w-4xl overflow-hidden rounded-lg shadow-2xl ring-1 ring-gold/30">
+              <video
+                src="/videos/szczenieta-w-ogrodzie.mp4"
+                controls
+                preload="metadata"
+                playsInline
+                className="aspect-video w-full bg-bark-700 object-cover"
+              />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* O HODOWLI */}
+      <section className="section bg-cream-100">
         <Reveal>
           <div className="container-prose text-center">
             <p className="eyebrow">O hodowli</p>
