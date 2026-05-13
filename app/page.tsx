@@ -68,14 +68,17 @@ export default function HomePage() {
           <div className="lg:col-span-5">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg ring-1 ring-gold/30 shadow-2xl">
               <Image
-                src="/images/inne/2025-09-24_122252410712236139.avif"
-                alt="Wyżeł czeski (Český fousek) — Kraina Wąsaczy"
+                src="/images/inne/2025-12-31_122270160098236139.avif"
+                alt="Aria i Eros — wyżły czeskie z Krainy Wąsaczy"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover"
+                className="object-cover object-center"
               />
             </div>
+            <p className="mt-3 text-center text-xs uppercase tracking-[0.18em] text-gold/80">
+              Aria & Eros — nasze psy hodowlane
+            </p>
           </div>
         </div>
       </section>
@@ -180,7 +183,7 @@ export default function HomePage() {
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
               <p className="eyebrow">Nasi rodzice</p>
-              <h2 className="heading-lg">Nancy i Eros</h2>
+              <h2 className="heading-lg">Aria i Eros</h2>
               <p className="mt-4 text-bark-500">
                 Poznaj psy, które tworzą podstawę naszej hodowli — ich rodowody,
                 osiągnięcia w łowisku i charaktery.

@@ -14,7 +14,7 @@ const NAV_ITEMS: NavItem[] = [
     label: 'Rodzice',
     href: '/rodzice',
     children: [
-      { label: 'Nancy (suka)', href: '/rodzice/mama' },
+      { label: 'Aria (suka)', href: '/rodzice/mama' },
       { label: 'Eros (reproduktor)', href: '/rodzice/tata' },
     ],
   },

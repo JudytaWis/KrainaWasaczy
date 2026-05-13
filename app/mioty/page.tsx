@@ -7,7 +7,7 @@ import { LITTERS, QUOTES } from '@/lib/placeholders';
 export const metadata = pageMetadata({
   title: 'Mioty',
   description:
-    'Mioty Krainy Wąsaczy — wyżeł czeski (Český fousek) FCI. Miot A (2024), Miot B (2025, Nancy × Eros) i planowany Miot C 2026/2027 — rezerwacje otwarte.',
+    'Mioty Krainy Wąsaczy — wyżeł czeski (Český fousek) FCI. Miot A (2024), Miot B (2025, Aria × Eros) i planowany Miot C 2026/2027 — rezerwacje otwarte.',
   path: '/mioty',
 });
 

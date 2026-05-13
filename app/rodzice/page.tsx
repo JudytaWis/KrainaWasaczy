@@ -6,7 +6,7 @@ import { DOGS } from '@/lib/placeholders';
 export const metadata = pageMetadata({
   title: 'Nasi rodzice',
   description:
-    'Poznaj psy hodowlane Krainy Wąsaczy — Nancy ze Staropleských luk (suka) i Erosa z Vallis Baptismi (reproduktor miotu B). Rodowody ZKwP / FCI, charaktery, praca w łowisku.',
+    'Poznaj psy hodowlane Krainy Wąsaczy — Aria (Nancy ze Staropleských luk) (suka) i Erosa z Vallis Baptismi (reproduktor miotu B). Rodowody ZKwP / FCI, charaktery, praca w łowisku.',
   path: '/rodzice',
 });
 
@@ -24,7 +24,7 @@ export default function ParentsListPage() {
         <div className="container-wide">
           <div className="mx-auto max-w-2xl text-center">
             <p className="eyebrow">Nasi rodzice</p>
-            <h1 className="heading-xl">Nancy i Eros</h1>
+            <h1 className="heading-xl">Aria i Eros</h1>
             <div className="ornament-divider">
               <span aria-hidden="true" />
             </div>
@@ -35,7 +35,7 @@ export default function ParentsListPage() {
               potwierdzone codzienną pracą w łowisku.
             </p>
             <p className="mt-4 text-sm text-bark-400">
-              Nancy mieszka u nas i jest podstawą hodowli. Eros to reproduktor
+              Aria mieszka u nas i jest podstawą hodowli. Eros to reproduktor
               wybrany do miotu B — pies z zewnętrznej hodowli.
             </p>
           </div>

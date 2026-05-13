@@ -21,7 +21,7 @@ const STEPS = [
   {
     icon: Handshake,
     title: 'Spotkanie / wizyta',
-    desc: 'Zapraszamy do nas w Bibicach — można poznać Nancy, zobaczyć w jakich warunkach dorastają szczenięta i porozmawiać na żywo.',
+    desc: 'Zapraszamy do nas w Bibicach — można poznać Arię, zobaczyć w jakich warunkach dorastają szczenięta i porozmawiać na żywo.',
   },
   {
     icon: Wallet,

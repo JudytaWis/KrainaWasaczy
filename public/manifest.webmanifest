@@ -1,0 +1,26 @@
+{
+  "name": "Kraina Wąsaczy — Hodowla wyżła czeskiego (Český fousek) FCI",
+  "short_name": "Kraina Wąsaczy",
+  "description": "Rodzinna hodowla wyżła czeskiego FCI z Bibic koło Krakowa",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#5C4033",
+  "icons": [
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -6,7 +6,7 @@ import { DOGS } from '@/lib/placeholders';
 const dog = DOGS.mama;
 
 export const metadata = pageMetadata({
-  title: `Nancy ze Staropleských luk — suka hodowlana`,
+  title: `Aria (Nancy ze Staropleských luk) — suka hodowlana`,
   description: `${dog.fullName} — suka hodowlana wyżła czeskiego (Český fousek) w Krainie Wąsaczy. Aktywnie pracująca w łowisku: wystawianie, aport z lądu i wody, tropienie. Rodowód ZKwP / FCI.`,
   path: '/rodzice/mama',
 });

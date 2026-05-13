@@ -93,7 +93,7 @@ export function Footer() {
             </li>
             <li>
               <Link href="/rodzice/mama" className="hover:text-cream-50">
-                Nancy (suka)
+                Aria (suka)
               </Link>
             </li>
             <li>

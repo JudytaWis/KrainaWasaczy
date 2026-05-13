@@ -97,7 +97,7 @@ export function DogDetail({ dog }: DogDetailProps) {
       {/* OPIS */}
       <section className="section bg-cream-100">
         <div className="container-prose">
-          <p className="eyebrow">O {dog.role === 'Suka hodowlana' ? 'Nancy' : 'Erosie'}</p>
+          <p className="eyebrow">O {dog.role === 'Suka hodowlana' ? 'Arii' : 'Erosie'}</p>
           <h2 className="heading-lg">{dog.fullName}</h2>
           <p className="mt-6 text-lg leading-relaxed text-bark-500">
             {dog.description}

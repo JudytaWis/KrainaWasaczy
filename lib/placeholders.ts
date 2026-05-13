@@ -73,17 +73,17 @@ export type Dog = {
 export const MAMA: Dog = {
   slug: 'mama',
   role: 'Suka hodowlana',
-  name: 'Nancy',
+  name: 'Aria',
   kennelName: 'ze Staropleských luk',
-  fullName: 'Nancy ze Staropleských luk',
+  fullName: 'Aria (Nancy ze Staropleských luk)',
   tagline:
     'Suczka o wyjątkowej psychice, naturalnym talencie użytkowym i silnym przywiązaniu do człowieka.',
   birthDate: '[TODO: data urodzenia — DD.MM.RRRR]',
-  coat: '[TODO: maść — np. brązowy deresz / siwa z brązową głową]',
+  coat: 'Brązowy deresz, duża, silna sylwetka — typowy eksterier rasy',
   pedigreeNumber: '[TODO: numer rodowodowy FCI / ČMKU]',
-  origin: 'Hodowla „ze Staropleských luk" (Czechy)',
-  sire: '[TODO: imię ojca Nancy]',
-  dam: '[TODO: imię matki Nancy]',
+  origin: 'Hodowla „ze Staropleských luk" (Czechy) — pełne imię hodowlane: Aria (Nancy ze Staropleských luk)',
+  sire: '[TODO: imię ojca Arii]',
+  dam: '[TODO: imię matki Arii]',
   health: [
     '[TODO: HD — wynik prześwietlenia bioder]',
     '[TODO: ED — wynik prześwietlenia łokci]',
@@ -94,14 +94,16 @@ export const MAMA: Dog = {
     'Aktywnie pracuje w łowisku: wystawianie, aport z lądu i z wody, tropienie',
     '[TODO: oficjalne próby pracy / konkursy — numery i daty]',
   ],
-  shows: ['[TODO: oceny wystawowe — klasa, ocena, sędzia]'],
+  shows: [
+    'Międzynarodowa Wystawa Psów Rasowych — Wrocław 2024: Zwycięzca Rasy. Finał w kategorii „Najlepsza Para" razem z Erosem.',
+  ],
   character:
     'Zrównoważona, oddana, łagodna w domu i pełna pasji w pracy. Doskonale współpracuje z człowiekiem — łączy w sobie wrodzony instynkt łowiecki z silną więzią rodzinną. Z dzieci i innych zwierząt potrafi cieszyć się tak samo jak z dnia spędzonego w łowisku.',
   description:
-    'Nancy to fundament naszej hodowli — suczka o wyjątkowej psychice, naturalnym talencie użytkowym i silnym przywiązaniu do człowieka. W łowisku pracuje aktywnie: wystawia, aportuje z lądu i z wody, świetnie tropi. Pochodzi z czeskiej hodowli „ze Staropleských luk" — z linii sprawdzonych pracujących wyżłów czeskich.',
+    'Aria to fundament naszej hodowli — duża, silna suczka o brązowym dereszu, z wyjątkową psychiką, naturalnym talentem użytkowym i silnym przywiązaniu do człowieka. W łowisku pracuje aktywnie: wystawia, aportuje z lądu i z wody, świetnie tropi. Pełne imię hodowlane: Aria (Nancy ze Staropleských luk) — pochodzi z czeskiej hodowli o sprawdzonych pracujących liniach. W 2024 roku zdobyła tytuł Zwycięzcy Rasy na Międzynarodowej Wystawie Psów we Wrocławiu.',
   livesAtKennel: true,
-  galleryCount: 4,
-  pedigreePdfPath: '/documents/nancy-rodowod.pdf',
+  galleryCount: 6,
+  pedigreePdfPath: '/documents/aria-rodowod.pdf',
 };
 
 export const TATA: Dog = {
@@ -113,9 +115,9 @@ export const TATA: Dog = {
   tagline:
     'Piękny i pracujący pies, zrównoważony, z doskonałym instynktem łowieckim i świetnym eksterierem.',
   birthDate: '[TODO: data urodzenia — DD.MM.RRRR]',
-  coat: '[TODO: maść — np. brązowy deresz / siwy z brązową głową]',
+  coat: 'Siwa maść z brązową głową — klasyczny eksterier wystawowy rasy',
   pedigreeNumber: '[TODO: numer rodowodowy FCI / ČMKU]',
-  origin: 'Hodowla „z Vallis Baptismi" (reproduktor z zewnątrz)',
+  origin: 'Hodowla „z Vallis Baptismi"',
   sire: '[TODO: imię ojca Erosa]',
   dam: '[TODO: imię matki Erosa]',
   health: [
@@ -128,13 +130,16 @@ export const TATA: Dog = {
     'Pracuje w łowisku — sprawdzony reproduktor o doskonałym instynkcie',
     '[TODO: oficjalne próby pracy / konkursy — numery i daty]',
   ],
-  shows: ['[TODO: oceny wystawowe — klasa, ocena, sędzia]'],
+  shows: [
+    'XXVII Międzynarodowa Wystawa Psów Rasowych CACIB Kraków — Zwycięzca Rasy, ocena Doskonała.',
+    'Międzynarodowa Wystawa Psów Wrocław 2024 — Finał w kategorii „Najlepsza Para" (z Arią).',
+  ],
   character:
-    'Piękny i pracujący pies — zrównoważony, z doskonałym instynktem łowieckim i świetnym eksterierem. Pewny siebie, ale nie agresywny; w pracy energiczny i skupiony.',
+    'Piękny i pracujący pies — zrównoważony, z doskonałym instynktem łowieckim i świetnym eksterierem. Pewny siebie, ale nie agresywny; w pracy energiczny i skupiony. Razem z Arią tworzą "psy na medal".',
   description:
-    'Eros to reproduktor wybrany do miotu B Krainy Wąsaczy. Łączy w sobie eksterier wystawowy z prawdziwym charakterem psa pracującego — daje potomstwo o silnym instynkcie łowieckim i zrównoważonej psychice. Eros nie mieszka u nas — jest reproduktorem z zewnętrznej hodowli, wybranym pod konkretny miot.',
-  livesAtKennel: false,
-  galleryCount: 4,
+    'Eros z Vallis Baptismi — siwy pies z brązową głową, partner Arii w hodowli i w łowisku. Łączy eksterier wystawowy z prawdziwym charakterem psa pracującego — daje potomstwo o silnym instynkcie łowieckim i zrównoważonej psychice. Wspólnie z Arią pracują w polu i lesie — są naszą "najlepszą parą", zarówno w domu jak i na wystawach.',
+  livesAtKennel: true,
+  galleryCount: 6,
   pedigreePdfPath: '/documents/eros-rodowod.pdf',
 };
 
@@ -196,6 +201,14 @@ export const LITTERS: readonly Litter[] = [
         name: 'Atena z Krainy Wąsaczy',
         desc: 'Suczka z miotu A, dziś dorosła i pracująca w łowisku. Regularnie spotyka się z rodzicami podczas naszych wspólnych wypraw do lasu — miłość, natura i więź między psem a człowiekiem w czystej postaci.',
       },
+      {
+        name: 'Aron z Krainy Wąsaczy',
+        desc: 'Pies z miotu A — kochający właściciele zabierają go nad wodę, w teren. „Jak wyżeł w wodzie" — w swoim żywiole.',
+      },
+      {
+        name: 'Artos z Krainy Wąsaczy',
+        desc: 'Syn Arii z pierwszego miotu — razem przejęli trawnik 😍 To z takich szczeniąt jesteśmy najbardziej dumni.',
+      },
     ],
     galleryCount: 12,
     coverImage: '/images/miot-a/2024-05-28_122140646666236139.avif',
@@ -222,13 +235,13 @@ export const LITTERS: readonly Litter[] = [
     born: '2025-05-27',
     bornDisplay: '27 maja 2025',
     parents: {
-      mama: 'Nancy ze Staropleských luk',
+      mama: 'Aria (Nancy ze Staropleských luk)',
       mamaSlug: 'mama',
       tata: 'Eros z Vallis Baptismi',
       tataSlug: 'tata',
     },
     description:
-      'Drugi miot hodowli — z połączenia naszej Nancy i reproduktora Erosa z Vallis Baptismi. Linia użytkowa, sprawdzone pochodzenie, potencjał łowiecki i wystawowy.',
+      'Drugi miot hodowli — z połączenia naszej Arii i reproduktora Erosa z Vallis Baptismi. Linia użytkowa, sprawdzone pochodzenie, potencjał łowiecki i wystawowy.',
     longDescription:
       'Miot B to psy o genach pracy, instynkcie i lojalności — które nie zawiodą w polu, w lesie ani na wodzie. Rodowód ZKwP / FCI, linia użytkowa, sprawdzone pochodzenie. Potencjał zarówno łowiecki, jak i wystawowy. Idealne dla aktywnych myśliwych i pasjonatów kynologii użytkowej. Wszystkie szczenięta odebrane przez swoich nowych właścicieli.',
     notableLittermates: [
@@ -274,7 +287,7 @@ export const LITTERS: readonly Litter[] = [
     plannedFor: 'Zima 2026 / 2027',
     reservationsOpen: true,
     parents: {
-      mama: 'Nancy ze Staropleských luk',
+      mama: 'Aria (Nancy ze Staropleských luk)',
       mamaSlug: 'mama',
       tata: '[TODO: reproduktor wybierany pod miot C]',
     },
@@ -378,11 +391,11 @@ export const GALLERY: readonly GalleryItem[] = [
   { src: '/images/miot-b/miot-b-5.avif', alt: 'Miot B — kolaż szczeniąt', category: 'mioty' },
   // Miot C — zdjęcia rodziców i przygotowań do miotu
   { src: '/images/miot-c-przygotowania/2026-03-26_122284950116236139.avif', alt: 'Przygotowania do miotu C', category: 'mioty', caption: 'Miot C · planowany' },
-  { src: '/images/miot-c-przygotowania/2026-03-03_122280949208236139.avif', alt: 'Wiosna 2026 — Nancy i Eros', category: 'mioty' },
+  { src: '/images/miot-c-przygotowania/2026-03-03_122280949208236139.avif', alt: 'Wiosna 2026 — Aria i Eros', category: 'mioty' },
   // ── Rodzice ──
-  { src: '/images/inne/2025-09-24_122252410712236139.avif', alt: 'Nancy ze Staropleských luk — portret', category: 'rodzice', caption: 'Nancy — nasza suka hodowlana' },
-  { src: '/images/inne/2025-09-24_122252410640236139.avif', alt: 'Nancy w terenie', category: 'rodzice' },
-  { src: '/images/inne/2025-09-24_122252410568236139.avif', alt: 'Nancy — portret', category: 'rodzice' },
+  { src: '/images/inne/2025-09-24_122252410712236139.avif', alt: 'Aria (Nancy ze Staropleských luk) — portret', category: 'rodzice', caption: 'Aria — nasza suka hodowlana' },
+  { src: '/images/inne/2025-09-24_122252410640236139.avif', alt: 'Aria w terenie', category: 'rodzice' },
+  { src: '/images/inne/2025-09-24_122252410568236139.avif', alt: 'Aria — portret', category: 'rodzice' },
   { src: '/images/inne/2025-08-29_122247499040236139.avif', alt: 'Eros z Vallis Baptismi', category: 'rodzice', caption: 'Eros — reproduktor miotu B' },
   { src: '/images/inne/2025-08-29_122247499028236139.avif', alt: 'Eros — eksterier', category: 'rodzice' },
   { src: '/images/inne/2025-08-29_122247498992236139.avif', alt: 'Eros — chwila skupienia', category: 'rodzice' },
@@ -439,7 +452,7 @@ export const GALLERY_VIDEOS: readonly VideoItem[] = [
   },
   {
     title: 'Bertunia na spacerku z mamą',
-    description: 'Berta z Krainy Wąsaczy na spacerze z Nancy — typowa scena z naszej codzienności.',
+    description: 'Berta z Krainy Wąsaczy na spacerze z Arią — typowa scena z naszej codzienności.',
     localSrc: '/videos/2025-09-14.mp4',
     date: '2025-09-14',
   },
@@ -454,6 +467,12 @@ export const GALLERY_VIDEOS: readonly VideoItem[] = [
     description: 'Szczeniaki miotu B — pierwsze tygodnie życia.',
     localSrc: '/videos/2025-08-03.mp4',
     date: '2025-08-03',
+  },
+  {
+    title: 'Wyprawa nad wodę — miłość od pierwszego plusku',
+    description: 'Suczki wyżła czeskiego odkrywają uroki wody. Wyżeł czeski to rasa, której woda nie straszy — od najmłodszych dni czują się w niej naturalnie.',
+    localSrc: '/videos/2025-08-20.mp4',
+    date: '2025-08-20',
   },
 ] as const;
 
@@ -512,7 +531,7 @@ export const NEWS: readonly NewsItem[] = [
     date: '2025-07-23',
     title: 'Basta z Krainy Wąsaczy — jasna perełka z miotu B',
     excerpt: 'Urodzona 28 maja 2025, 8-tygodniowa suczka wyżła czeskiego (Český fousek). Najjaśniejsze umaszczenie z całego miotu — klasyczny brązowy deresz.',
-    body: 'Z charakteru: odważna, ciekawska i bardzo towarzyska. Już teraz pokazuje ogromny potencjał — zarówno jako pies użytkowy, jak i oddana towarzyszka domowa. Rodowód Basty to przemyślane połączenie dwóch znakomitych linii: ojciec Eros z Vallis Baptismi (pracujący pies z doskonałym instynktem łowieckim) i matka Nancy ze Staropleských luk (suczka o wyjątkowej psychice).',
+    body: 'Z charakteru: odważna, ciekawska i bardzo towarzyska. Już teraz pokazuje ogromny potencjał — zarówno jako pies użytkowy, jak i oddana towarzyszka domowa. Rodowód Basty to przemyślane połączenie dwóch znakomitych linii: ojciec Eros z Vallis Baptismi (pracujący pies z doskonałym instynktem łowieckim) i matka Aria (Nancy ze Staropleských luk) (suczka o wyjątkowej psychice).',
     category: 'miot',
     image: '/images/miot-b/2025-07-23_122239564844236139.avif',
   },
