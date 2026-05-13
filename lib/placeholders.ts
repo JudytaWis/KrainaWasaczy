@@ -211,8 +211,10 @@ export const LITTERS: readonly Litter[] = [
     born: '2024-03-26',
     bornDisplay: '26 marca 2024',
     parents: {
-      mama: '[TODO: matka miotu A]',
-      tata: '[TODO: ojciec miotu A]',
+      mama: 'Aria (Nancy ze Staropleských luk)',
+      mamaSlug: 'mama',
+      tata: 'Eros z Vallis Baptismi',
+      tataSlug: 'tata',
     },
     description:
       'Pierwszy miot Krainy Wąsaczy. Wszystkie szczenięta trafiły do swoich nowych, troskliwych domów.',
@@ -311,12 +313,13 @@ export const LITTERS: readonly Litter[] = [
     parents: {
       mama: 'Aria (Nancy ze Staropleských luk)',
       mamaSlug: 'mama',
-      tata: '[TODO: reproduktor wybierany pod miot C]',
+      tata: 'Eros z Vallis Baptismi',
+      tataSlug: 'tata',
     },
     description:
       'Planowany miot — rezerwacje otwarte. Jeśli szukasz wyżła czeskiego do łowiectwa, do aktywnej rodziny, jako partnera w terenie i na co dzień — to miot dla Ciebie.',
     longDescription:
-      'Jeśli szukasz wyżła czeskiego: do łowiectwa, do aktywnej rodziny, jako partnera w terenie i na co dzień, to nasz miot „C" może być właśnie dla Ciebie. Ofertę naszą kierujemy do osób poszukujących aktywnych psów pracujących — myśliwych, miłośników sportów kynologicznych, rodzin gotowych zapewnić psu dużo ruchu i pracy umysłowej. Reproduktor wybierany pod miot — informacja zostanie opublikowana po zatwierdzeniu krycia.',
+      'Jeśli szukasz wyżła czeskiego: do łowiectwa, do aktywnej rodziny, jako partnera w terenie i na co dzień, to nasz miot „C" może być właśnie dla Ciebie. Ofertę naszą kierujemy do osób poszukujących aktywnych psów pracujących — myśliwych, miłośników sportów kynologicznych, rodzin gotowych zapewnić psu dużo ruchu i pracy umysłowej. Rodzice: Aria i Eros — sprawdzona „najlepsza para" naszej hodowli z miotami A i B za sobą.',
     galleryCount: 12,
     coverImage: '/images/miot-c-przygotowania/2026-03-03_122280949208236139.avif',
     images: [
@@ -522,7 +525,7 @@ export const NEWS: readonly NewsItem[] = [
     body: 'Kleszcze mogą przenosić groźne choroby (babeszjoza, borelioza, anaplazmoza), nieleczone prowadzą do poważnych powikłań. W naszej hodowli stosujemy tabletki Bravecto — działają nawet do 12 tygodni, skutecznie eliminują kleszcze i pchły, są wygodną formą (brak problemu z kąpielą czy deszczem). Dla aktywnych psów (las, łąki, woda) tabletki są szczególnie polecane — działają od środka i nie zmywają się. Zabezpieczenie warto rozpocząć już na początku wiosny.',
     category: 'zdrowie',
     image: '/images/miot-c-przygotowania/2026-03-26_122284950116236139.avif',
-    fbUrl: 'https://www.facebook.com/122293580210236139/posts/122284950308236139',
+    fbUrl: 'https://www.facebook.com/permalink.php?id=61557084189380&story_fbid=122284950308236139',
   },
   {
     id: 'atena-w-lesie',
@@ -541,7 +544,7 @@ export const NEWS: readonly NewsItem[] = [
     body: 'Zapraszamy do kontaktu w wiadomości prywatnej — chętnie opowiemy więcej o planowanym skojarzeniu i warunkach rezerwacji.',
     category: 'miot',
     image: '/images/miot-c-przygotowania/2026-02-09_122277060122236139.avif',
-    fbUrl: 'https://www.facebook.com/122293580210236139/posts/122277060476236139',
+    fbUrl: 'https://www.facebook.com/permalink.php?id=61557084189380&story_fbid=122277060476236139',
   },
   {
     id: 'berta',
@@ -550,7 +553,7 @@ export const NEWS: readonly NewsItem[] = [
     excerpt: 'Szczeniak z miotu B z ogromnym potencjałem łowieckim — już teraz pokazuje świetny nos i silny temperament prawdziwego psa pracującego.',
     category: 'miot',
     image: '/images/inne/2025-09-24_122252410712236139.avif',
-    fbUrl: 'https://www.facebook.com/122293580210236139/posts/122252411060236139',
+    fbUrl: 'https://www.facebook.com/permalink.php?id=61557084189380&story_fbid=122252411060236139',
   },
   {
     id: 'basta-prezentacja',
@@ -560,15 +563,16 @@ export const NEWS: readonly NewsItem[] = [
     body: 'Z charakteru: odważna, ciekawska i bardzo towarzyska. Już teraz pokazuje ogromny potencjał — zarówno jako pies użytkowy, jak i oddana towarzyszka domowa. Rodowód Basty to przemyślane połączenie dwóch znakomitych linii: ojciec Eros z Vallis Baptismi (pracujący pies z doskonałym instynktem łowieckim) i matka Aria (suczka o wyjątkowej psychice).',
     category: 'miot',
     image: '/images/miot-b/2025-07-23_122239564844236139.avif',
-    fbUrl: 'https://www.facebook.com/122293580210236139/posts/122239565162236139',
+    fbUrl: 'https://www.facebook.com/permalink.php?id=61557084189380&story_fbid=122239565162236139',
   },
   {
     id: 'hunting-expo',
     date: '2025-05-04',
     title: 'Hunting Expo Kraków',
-    excerpt: 'Mieliśmy okazję uczestniczyć w wystawie Hunting Expo w Krakowie. Spotkania, rozmowy z myśliwymi, pasjonatami i hodowcami.',
+    excerpt: 'Mieliśmy okazję uczestniczyć w wystawie Hunting Expo w Krakowie. Spotkania, rozmowy z myśliwymi, pasjonatami i hodowcami — wyjątkowa atmosfera tradycji łowieckich.',
     category: 'wydarzenia',
-    fbUrl: 'https://www.facebook.com/122293580210236139/posts/122221661414236139',
+    image: '/images/miot-b/2025-05-04_122221659962236139.avif',
+    fbUrl: 'https://www.facebook.com/permalink.php?story_fbid=122221661414236139&id=61557084189380',
   },
   {
     id: 'cechy-psow-mysliwskich',
@@ -577,7 +581,7 @@ export const NEWS: readonly NewsItem[] = [
     excerpt: 'Cechy psa myśliwskiego: zrównoważony, nie agresywny, inteligentny. Wyżeł czeski to UNIWERSALNY pies — silny, wytrzymały, łagodny i łatwy do ułożenia.',
     body: 'Cechy psów myśliwskich: ZRÓWNOWAŻONE — nie boją się strzału ani niczego innego. NIE AGRESYWNE — myśliwy nie poluje sam, pies musi oddać zwierzynę, nie zjeść. INTELIGENTNE — odróżniają czas pracy od czasu odpoczynku; w domu bawią się z dziećmi i uwielbiają pieszczoty.\n\nWyżeł czeski przez naszych sąsiadów stworzony został jako UNIWERSALNY pies na polowania. Na polowaniu pracuje jako: APORTER (przynosi strzelone ptactwo), GOŃCZY (wypłasza i goni zwierzynę), LEGAWIEC (poluje na ptactwo), TROPOWIEC (poszukuje rannej zwierzyny — wyżły mają doskonały węch), PŁOCHACZ (wypłasza ptaki, wchodzi w gęste szuwary).\n\nWymagają RUCHU (godzina dziennie wybiegania) i ROZRYWKI (zmienność — raz spacer na polu, raz w lesie, bieganie z rowerem, pływanie).',
     category: 'rasa',
-    fbUrl: 'https://www.facebook.com/122293580210236139/posts/122133689744236139',
+    fbUrl: 'https://www.facebook.com/permalink.php?id=61557084189380&story_fbid=122133689744236139',
   },
 ] as const;
 
