@@ -65,8 +65,6 @@ export type Dog = {
   origin: string;
   sire: string;
   dam: string;
-  health: string[];
-  trials: string[];
   shows: string[];
   character: string;
   description: string;
@@ -88,22 +86,12 @@ export const MAMA: Dog = {
   fullName: 'Aria (Nancy ze Staropleských luk)',
   tagline:
     'Suczka o wyjątkowej psychice, naturalnym talencie użytkowym i silnym przywiązaniu do człowieka.',
-  birthDate: '[TODO: data urodzenia — DD.MM.RRRR]',
+  birthDate: '17.01.2021',
   coat: 'Brązowy deresz, duża, silna sylwetka — typowy eksterier rasy',
-  pedigreeNumber: '[TODO: numer rodowodowy FCI / ČMKU]',
+  pedigreeNumber: 'ČLP/CF/56055/21',
   origin: 'Hodowla „ze Staropleských luk" (Czechy) — pełne imię hodowlane: Aria (Nancy ze Staropleských luk)',
-  sire: '[TODO: imię ojca Arii]',
-  dam: '[TODO: imię matki Arii]',
-  health: [
-    '[TODO: HD — wynik prześwietlenia bioder]',
-    '[TODO: ED — wynik prześwietlenia łokci]',
-    '[TODO: oczy — wynik badania okulistycznego]',
-    '[TODO: testy genetyczne — DNA panel]',
-  ],
-  trials: [
-    'Aktywnie pracuje w łowisku: wystawianie, aport z lądu i z wody, tropienie',
-    '[TODO: oficjalne próby pracy / konkursy — numery i daty]',
-  ],
+  sire: 'Aris od Lesa Borkovniku (ČLP/CF/62827/17)',
+  dam: 'Laura ze Staropleských luk (ČLP/CF/63160/19)',
   shows: [
     'Międzynarodowa Wystawa Psów Rasowych — Wrocław 2024: Zwycięzca Rasy. Finał w kategorii „Najlepsza Para" razem z Erosem.',
   ],
@@ -151,22 +139,12 @@ export const TATA: Dog = {
   fullName: 'Eros z Vallis Baptismi',
   tagline:
     'Piękny i pracujący pies, zrównoważony, z doskonałym instynktem łowieckim i świetnym eksterierem.',
-  birthDate: '[TODO: data urodzenia — DD.MM.RRRR]',
+  birthDate: '13.02.2023',
   coat: 'Siwa maść z brązową głową — klasyczny eksterier wystawowy rasy',
-  pedigreeNumber: '[TODO: numer rodowodowy FCI / ČMKU]',
+  pedigreeNumber: 'ČLP/CF/65921/23',
   origin: 'Hodowla „z Vallis Baptismi"',
-  sire: '[TODO: imię ojca Erosa]',
-  dam: '[TODO: imię matki Erosa]',
-  health: [
-    '[TODO: HD — wynik prześwietlenia bioder]',
-    '[TODO: ED — wynik prześwietlenia łokci]',
-    '[TODO: oczy — wynik badania okulistycznego]',
-    '[TODO: testy genetyczne — DNA panel]',
-  ],
-  trials: [
-    'Pracuje w łowisku — sprawdzony reproduktor o doskonałym instynkcie',
-    '[TODO: oficjalne próby pracy / konkursy — numery i daty]',
-  ],
+  sire: 'Max od Tyrše (ČLP/CF/64125/22)',
+  dam: 'Brie z Nezabylicke hajenky (ČLP/CF/64699/21)',
   shows: [
     'XXVII Międzynarodowa Wystawa Psów Rasowych CACIB Kraków — Zwycięzca Rasy, ocena Doskonała.',
     'Międzynarodowa Wystawa Psów Wrocław 2024 — Finał w kategorii „Najlepsza Para" (z Arią).',

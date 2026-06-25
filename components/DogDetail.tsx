@@ -172,47 +172,24 @@ export function DogDetail({ dog }: DogDetailProps) {
         </div>
       </section>
 
-      {/* BADANIA / OSIĄGNIĘCIA */}
-      <section className="section bg-cream-100">
-        <div className="container-wide grid gap-12 lg:grid-cols-3">
-          <div>
-            <p className="eyebrow">Badania i osiągnięcia</p>
-            <h2 className="heading-md">Zdrowie, próby pracy, wystawy</h2>
+      {/* OSIĄGNIĘCIA WYSTAWOWE */}
+      {dog.shows.length > 0 && (
+        <section className="section bg-cream-100">
+          <div className="container-wide grid gap-12 lg:grid-cols-3">
+            <div>
+              <p className="eyebrow">Osiągnięcia</p>
+              <h2 className="heading-md">Wystawy i sukcesy</h2>
+            </div>
+            <ul className="lg:col-span-2 grid gap-4 sm:grid-cols-2">
+              {dog.shows.map((item) => (
+                <li key={item} className="border-l-2 border-forest-200 pl-4 text-bark-500">
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="lg:col-span-2 grid gap-8 sm:grid-cols-3">
-            <div>
-              <h3 className="font-serif text-xl">Zdrowie / certyfikaty</h3>
-              <ul className="mt-4 space-y-2 text-sm text-bark-500">
-                {dog.health.map((item) => (
-                  <li key={item} className="border-l-2 border-forest-200 pl-3">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-serif text-xl">Praca w łowisku</h3>
-              <ul className="mt-4 space-y-2 text-sm text-bark-500">
-                {dog.trials.map((item) => (
-                  <li key={item} className="border-l-2 border-forest-200 pl-3">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-serif text-xl">Wystawy</h3>
-              <ul className="mt-4 space-y-2 text-sm text-bark-500">
-                {dog.shows.map((item) => (
-                  <li key={item} className="border-l-2 border-forest-200 pl-3">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* CHARAKTER */}
       <section className="section">
