@@ -9,13 +9,13 @@ type NavChild = { label: string; href: string };
 type NavItem = { label: string; href: string; children?: NavChild[] };
 
 const NAV_ITEMS: NavItem[] = [
-  { label: 'Strona główna', href: '/' },
   {
     label: 'Hodowla',
     href: '/hodowla',
     children: [
       { label: 'O nas', href: '/o-nas' },
       { label: 'O rasie — wyżeł czeski', href: '/o-rasie' },
+      { label: 'Kontakt', href: '/kontakt' },
     ],
   },
   {
@@ -36,7 +36,6 @@ const NAV_ITEMS: NavItem[] = [
     ],
   },
   { label: 'Galeria', href: '/galeria' },
-  { label: 'Kontakt', href: '/kontakt' },
 ];
 
 export function Header() {
