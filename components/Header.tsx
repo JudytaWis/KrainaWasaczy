@@ -14,7 +14,6 @@ const NAV_ITEMS: NavItem[] = [
     href: '/hodowla',
     children: [
       { label: 'O rasie — wyżeł czeski', href: '/o-rasie' },
-      { label: 'Kontakt', href: '/kontakt' },
     ],
   },
   {
@@ -36,6 +35,7 @@ const NAV_ITEMS: NavItem[] = [
   },
   { label: 'Galeria', href: '/galeria' },
   { label: 'O nas', href: '/o-nas' },
+  { label: 'Kontakt', href: '/kontakt' },
 ];
 
 export function Header() {
