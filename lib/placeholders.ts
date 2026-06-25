@@ -13,8 +13,7 @@ export const SITE = {
   shortDescription: 'Hodowla wyżła czeskiego (Český fousek) FCI',
   longDescription:
     'Rodzinna hodowla wyżła czeskiego (Český fousek) zarejestrowana w Związku Kynologicznym w Polsce (FCI). Hodowla założona z pasji do mało znanej w Polsce, wspaniałej czeskiej rasy. Hodowca jest myśliwym — psy wychowywane są w klimacie łowieckim, z naciskiem na linie użytkowe.',
-  // TODO: docelowy adres po wdrożeniu
-  url: 'https://krainawasaczy.pl',
+  url: 'https://www.kraina-wasaczy.pl',
   locale: 'pl_PL',
   city: 'Bibice',
   region: 'małopolskie',
