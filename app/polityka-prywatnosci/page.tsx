@@ -34,7 +34,7 @@ export default function PrivacyPolicyPage() {
       </section>
 
       <section className="section">
-        <article className="container-narrow prose-bark space-y-8 text-bark-600">
+        <article className="container-prose prose-bark space-y-8 text-bark-600">
           <div>
             <h2 className="heading-md">1. Administrator danych</h2>
             <p className="mt-3 leading-relaxed">

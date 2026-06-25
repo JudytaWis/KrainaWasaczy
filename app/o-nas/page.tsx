@@ -8,7 +8,7 @@ import { SITE, QUOTES } from '@/lib/placeholders';
 
 export const metadata = pageMetadata({
   title: 'O nas',
-  description: `Poznaj naszą rodzinę i historię hodowli ${SITE.name}. Modesta i Adam Adamczyk — pasjonaci wyżła czeskiego, hodowcy z Bibic koło Krakowa.`,
+  description: `Poznaj naszą rodzinę i historię hodowli ${SITE.name}. Modesta i Artur Adamczyk — pasjonaci wyżła czeskiego, hodowcy z Bibic koło Krakowa.`,
   path: '/o-nas',
 });
 
@@ -28,7 +28,7 @@ export default function AboutPage() {
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
               <p className="eyebrow">O nas</p>
-              <h1 className="heading-xl">Modesta, Adam, Aria i Eros</h1>
+              <h1 className="heading-xl">Modesta, Artur, Aria i Eros</h1>
               <div className="ornament-divider">
                 <span aria-hidden="true" />
               </div>
@@ -61,14 +61,14 @@ export default function AboutPage() {
               <h2 className="heading-lg text-bark-700">Hodowla założona z pasji</h2>
               <p className="leading-relaxed">
                 Jesteśmy{' '}
-                <strong className="text-bark-700">Modestą i Adamem Adamczyk</strong>{' '}
+                <strong className="text-bark-700">Modestą i Arturem Adamczyk</strong>{' '}
                 — rodziną z Bibic koło Krakowa, dla której wyżeł czeski to coś
                 znacznie więcej niż rasa psa. <em>Kraina Wąsaczy</em> to wyraz
                 naszej fascynacji czeskim foušekiem (Český fousek) — mało jeszcze
                 znaną w Polsce, ale niezwykle wszechstronną rasą myśliwską.
               </p>
               <p className="leading-relaxed">
-                <strong>Adam</strong> jest myśliwym — myślistwo to tradycja w jego
+                <strong>Artur</strong> jest myśliwym — myślistwo to tradycja w jego
                 rodzinie od pokoleń, podobnie jak miłość do wyżłów. To on prowadzi
                 Arię i Erosa w łowisku, pracuje z nimi w polu, lesie i nad wodą.
                 <strong> Modesta</strong> czuwa nad szczeniętami — codzienna
@@ -112,7 +112,7 @@ export default function AboutPage() {
               <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg shadow-lg ring-1 ring-bark-100/40">
                 <Image
                   src="/images/inne/2024-08-26_122164022528236139.avif"
-                  alt="Adam z Erosem — codzienność hodowli"
+                  alt="Artur z Erosem — codzienność hodowli"
                   fill
                   sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover"
@@ -123,7 +123,7 @@ export default function AboutPage() {
               <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg shadow-lg ring-1 ring-bark-100/40">
                 <Image
                   src="/images/inne/2025-02-09_122200512380236139.avif"
-                  alt="Modesta i Adam z Arią i Erosem w domu"
+                  alt="Modesta i Artur z Arią i Erosem w domu"
                   fill
                   sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover"
@@ -161,7 +161,7 @@ export default function AboutPage() {
                 <Crosshair className="mx-auto h-10 w-10 text-forest-400" aria-hidden="true" />
                 <h3 className="font-serif text-xl mt-4">Tradycja myśliwska</h3>
                 <p className="mt-3 text-sm leading-relaxed text-bark-400">
-                  Adam to myśliwy z pokoleniami tradycji w rodzinie — wyżły mieli
+                  Artur to myśliwy z pokoleniami tradycji w rodzinie — wyżły mieli
                   jego rodzice i dziadkowie. Aria i Eros pracują z nim w łowisku,
                   a ich potomstwo dziedziczy ten naturalny instynkt.
                 </p>

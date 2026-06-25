@@ -139,7 +139,7 @@ export const TATA: Dog = {
   tagline:
     'Piękny i pracujący pies, zrównoważony, z doskonałym instynktem łowieckim i świetnym eksterierem.',
   birthDate: '13.02.2023',
-  coat: 'Siwa maść z brązową głową — klasyczny eksterier wystawowy rasy',
+  coat: 'Deresz z brązową głową — klasyczny eksterier wystawowy rasy',
   pedigreeNumber: 'ČLP/CF/65921/23',
   origin: 'Hodowla „z Vallis Baptismi"',
   sire: 'Max od Tyrše (ČLP/CF/64125/22)',
@@ -149,9 +149,9 @@ export const TATA: Dog = {
     'Międzynarodowa Wystawa Psów Wrocław 2024 — Finał w kategorii „Najlepsza Para" (z Arią).',
   ],
   character:
-    'Piękny i pracujący pies — zrównoważony, z doskonałym instynktem łowieckim i świetnym eksterierem. Pewny siebie, ale nie agresywny; w pracy energiczny i skupiony. Razem z Arią tworzą „psy na medal" — i w łowisku, i na ringu. „Dumny ojciec" miotu B, doskonale współpracujący z Adamem podczas polowań.',
+    'Piękny i pracujący pies — zrównoważony, z doskonałym instynktem łowieckim i świetnym eksterierem. Pewny siebie, ale nie agresywny; w pracy energiczny i skupiony. Razem z Arią tworzą „psy na medal" — i w łowisku, i na ringu. „Dumny ojciec" miotu B, doskonale współpracujący z Arturem podczas polowań.',
   description:
-    'Eros z Vallis Baptismi to siwy pies z brązową głową — partner Arii w hodowli, w łowisku i w domu. Łączy eksterier wystawowy z prawdziwym charakterem psa pracującego: razem z Adamem chodzi na polowania, tropi, aportuje, wystawia. Mieszka u nas, na co dzień, jest pełnoprawnym członkiem rodziny. Reproduktor miotu B (maj 2025) — Eros dał potomstwo o silnym instynkcie łowieckim, zrównoważonej psychice i pięknym eksterierze. Jego osiągnięcia wystawowe to m.in. Zwycięzca Rasy z oceną Doskonałą na XXVII Międzynarodowej Wystawie Psów Rasowych CACIB w Krakowie oraz finał w kategorii „Najlepsza Para" razem z Arią na Międzynarodowej Wystawie Psów we Wrocławiu 2024. To pies do biegania po lesie, pływania w jeziorach i wieczornych drzemek na kanapie — w jednym.',
+    'Eros z Vallis Baptismi to deresz z brązową głową — partner Arii w hodowli, w łowisku i w domu. Łączy eksterier wystawowy z prawdziwym charakterem psa pracującego: razem z Arturem chodzi na polowania, tropi, aportuje, wystawia. Mieszka u nas, na co dzień, jest pełnoprawnym członkiem rodziny. Reproduktor miotu B (maj 2025) — Eros dał potomstwo o silnym instynkcie łowieckim, zrównoważonej psychice i pięknym eksterierze. Jego osiągnięcia wystawowe to m.in. Zwycięzca Rasy z oceną Doskonałą na XXVII Międzynarodowej Wystawie Psów Rasowych CACIB w Krakowie oraz finał w kategorii „Najlepsza Para" razem z Arią na Międzynarodowej Wystawie Psów we Wrocławiu 2024. To pies do biegania po lesie, pływania w jeziorach i wieczornych drzemek na kanapie — w jednym.',
   livesAtKennel: true,
   galleryCount: 6,
   pedigreePdfPath: '/documents/metryka-psy.pdf',
@@ -167,7 +167,7 @@ export const TATA: Dog = {
     },
     {
       src: '/images/tata/eros-aria-para.avif',
-      alt: 'Eros i Aria — para hodowlana Krainy Wąsaczy: siwy deresz Eros i brązowa Aria obok siebie.',
+      alt: 'Eros i Aria — para hodowlana Krainy Wąsaczy: deresz Eros i brązowa Aria obok siebie.',
     },
     {
       src: '/images/tata/eros-miot.avif',
