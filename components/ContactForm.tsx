@@ -3,21 +3,24 @@
 import { useState, type FormEvent } from 'react';
 import { Send } from 'lucide-react';
 import { CONTACT } from '@/lib/placeholders';
+import { sendEmail, emailjsConfigured, TEMPLATE_CONTACT } from '@/lib/email';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
+
+/** Czy formularz kontaktowy wyśle przez EmailJS (jest service + key + szablon). */
+const CONTACT_READY = emailjsConfigured && Boolean(TEMPLATE_CONTACT);
 
 /**
  * Formularz kontaktowy.
  *
- * Domyślnie obecnie buduje mailto: link i otwiera klienta poczty —
- * to jest najprostsze rozwiązanie bez backendu. Później można podpiąć
- * Resend / Formspree / API Route i zmienić logikę submit (poniżej TODO).
+ * Wysyłka przez EmailJS (lib/email.ts). Gdy klucze EmailJS nie są ustawione
+ * w env, formularz robi fallback na klienta poczty (mailto:).
  */
 export function ContactForm() {
   const [status, setStatus] = useState<Status>('idle');
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus('submitting');
     setErrorMessage(null);
@@ -47,25 +50,34 @@ export function ContactForm() {
       return;
     }
 
-    // TODO: podmienić na fetch('/api/contact', ...) gdy będzie backend (np. Resend).
-    // Tymczasem otwieramy klienta pocztowego użytkownika.
     const subject = `Zapytanie ze strony — ${name}`;
     const body = `Imię i nazwisko: ${name}\nEmail: ${email}\nTelefon: ${
       phone || '—'
     }\n\nWiadomość:\n${message}`;
 
-    const mailtoLink = `mailto:${CONTACT.email}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`;
-
     try {
-      window.location.href = mailtoLink;
+      if (CONTACT_READY) {
+        await sendEmail(TEMPLATE_CONTACT, {
+          subject,
+          from_name: name,
+          reply_to: email,
+          phone: phone || '—',
+          message,
+        });
+      } else {
+        // Fallback bez konfiguracji EmailJS — otwórz klienta poczty.
+        const mailtoLink = `mailto:${CONTACT.email}?subject=${encodeURIComponent(
+          subject,
+        )}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoLink;
+      }
       setStatus('success');
       form.reset();
     } catch {
       setStatus('error');
       setErrorMessage(
-        'Nie udało się otworzyć klienta poczty. Napisz bezpośrednio na ' + CONTACT.email,
+        'Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz bezpośrednio na ' +
+          CONTACT.email,
       );
     }
   }
@@ -152,7 +164,9 @@ export function ContactForm() {
 
         {status === 'success' && (
           <p className="text-sm text-forest-400" role="status">
-            Otwarto Twój klient poczty — wystarczy wysłać wiadomość.
+            {CONTACT_READY
+              ? 'Dziękujemy! Wiadomość została wysłana — odezwiemy się wkrótce.'
+              : 'Otwarto Twój klient poczty — wystarczy wysłać wiadomość.'}
           </p>
         )}
         {status === 'error' && errorMessage && (

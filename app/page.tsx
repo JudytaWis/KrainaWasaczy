@@ -47,9 +47,12 @@ export default function HomePage() {
               „{QUOTES.hero}"
             </blockquote>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-cream-100/80">
-              Rodzinna hodowla wyżła czeskiego z Bibic koło Krakowa — założona z pasji
-              do mało znanej w Polsce, wspaniałej rasy. Hodowca jest myśliwym, psy
-              pracujące, linia użytkowa, sprawdzone pochodzenie.
+              Rodzinna hodowla wyżła czeskiego (Český fousek) z Bibic koło Krakowa,
+              w sercu Małopolski — hodowla psa myśliwskiego, ale nie tylko dla
+              myśliwych. Hodowca jest czynnym myśliwym, dlatego
+              stawiamy na psy pracujące i linię użytkową ze sprawdzonym pochodzeniem
+              i rodowodem ZKwP/FCI. Szczenięta wychowywane z sercem — do pracy
+              w łowisku i dla aktywnej rodziny.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link href="/rezerwacja" className="btn-accent">
@@ -89,8 +92,8 @@ export default function HomePage() {
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg ring-1 ring-gold/30 shadow-xl">
                 <Image
-                  src="/images/miot-a/2024-05-25_122139798416236139.avif"
-                  alt="Szczenięta z miotu A"
+                  src="/images/miot-a/joga-ze-szczeniakiem-wyzel-czeski.avif"
+                  alt="Joga ze szczeniakiem wyżła czeskiego szorstkowłosego z miotu A — Kraina Wąsaczy"
                   fill
                   sizes="(max-width: 1024px) 50vw, 20vw"
                   className="object-cover"
@@ -329,8 +332,8 @@ export default function HomePage() {
 
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-gold/30 shadow-xl">
             <Image
-              src="/images/miot-a/2024-05-07_122134524056236139.avif"
-              alt="Český fousek — wyżeł czeski szorstkowłosy"
+              src="/images/miot-a/szczeniak-czeski-wyzel-szorstkowlosy.avif"
+              alt="Szczenię czeskiego wyżła szorstkowłosego (Český fousek) z miotu A — Kraina Wąsaczy"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"

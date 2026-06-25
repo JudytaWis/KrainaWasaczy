@@ -61,7 +61,7 @@ export function GalleryGrid({ items }: Props) {
       >
         {visibleItems.map((item, i) => (
           <li
-            key={item.src}
+            key={`${item.category}-${item.src}`}
             className="group relative overflow-hidden rounded-lg bg-cream-200 shadow-sm ring-1 ring-bark-100/40 transition duration-500 hover:shadow-lg hover:ring-gold-500/50"
           >
             <div className="relative aspect-[4/3] w-full overflow-hidden">

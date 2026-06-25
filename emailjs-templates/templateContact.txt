@@ -1,0 +1,44 @@
+=========================================================
+ SZABLON EmailJS — FORMULARZ KONTAKTOWY
+=========================================================
+
+Subject (Temat):
+{{subject}}
+
+Pola po prawej (zakładka Content / Settings):
+  To Email:   wyzel.czeski.fousek@gmail.com
+  From Name:  Kraina Wąsaczy — formularz
+  From Email: ✅ zaznacz „Use Default Email Address"
+  Reply To:   {{reply_to}}
+
+Content → kliknij „Edit Content" i wklej poniższy HTML:
+---------------------------------------------------------
+<div style="font-family: system-ui, sans-serif, Arial; font-size: 14px; color: #2c3e50; max-width: 600px;">
+  <div style="font-size: 18px; font-weight: bold; margin-bottom: 4px;">
+    Nowe zapytanie — Kraina Wąsaczy
+  </div>
+  <div style="color: #7a8a99; font-size: 13px; margin-bottom: 16px;">
+    {{subject}}
+  </div>
+
+  <table role="presentation" style="width: 100%; border-collapse: collapse;">
+    <tr>
+      <td style="padding: 6px 0; color: #7a8a99; width: 120px;">Imię i nazwisko</td>
+      <td style="padding: 6px 0;"><strong>{{from_name}}</strong></td>
+    </tr>
+    <tr>
+      <td style="padding: 6px 0; color: #7a8a99;">Email</td>
+      <td style="padding: 6px 0;"><a href="mailto:{{reply_to}}">{{reply_to}}</a></td>
+    </tr>
+    <tr>
+      <td style="padding: 6px 0; color: #7a8a99;">Telefon</td>
+      <td style="padding: 6px 0;">{{phone}}</td>
+    </tr>
+  </table>
+
+  <div style="margin-top: 16px; padding: 15px; background-color: #f6f8f6; border-left: 3px solid #6b8f5a; border-radius: 4px; white-space: pre-wrap; font-size: 15px;">{{message}}</div>
+
+  <div style="margin-top: 16px; color: #aaaaaa; font-size: 12px;">
+    Aby odpowiedzieć, kliknij „Odpowiedz" — wiadomość trafi prosto do nadawcy.
+  </div>
+</div>

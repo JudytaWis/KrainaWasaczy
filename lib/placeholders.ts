@@ -45,6 +45,12 @@ export const CONTACT = {
   messengerNote: 'Wiadomości na Messengerze przez fanpage hodowli',
 };
 
+/**
+ * Zdjęcie galerii — albo sama ścieżka (alt generowany automatycznie),
+ * albo para { src, alt } z własnym, opisowym tekstem alternatywnym.
+ */
+export type GalleryImage = string | { readonly src: string; readonly alt: string };
+
 export type Dog = {
   slug: 'mama' | 'tata';
   role: 'Suka hodowlana' | 'Reproduktor';
@@ -71,7 +77,7 @@ export type Dog = {
   /** Główne zdjęcie psa — używane na kartach i hero podstrony */
   portraitImage?: string;
   /** Galeria zdjęć psa — używana na podstronie /rodzice/[slug] */
-  galleryImages?: readonly string[];
+  galleryImages?: readonly GalleryImage[];
 };
 
 export const MAMA: Dog = {
@@ -108,14 +114,32 @@ export const MAMA: Dog = {
   livesAtKennel: true,
   galleryCount: 6,
   pedigreePdfPath: '/documents/aria-rodowod.pdf',
-  portraitImage: '/images/miot-a/2024-03-28_122119186352236139.avif',
+  portraitImage: '/images/mama/aria-portret.avif',
   galleryImages: [
-    '/images/miot-a/2024-03-28_122119186352236139.avif',
-    '/images/miot-a/2024-03-21_122116017578236139.avif',
-    '/images/miot-a/2024-03-20_122115393518236139.avif',
-    '/images/inne/2025-12-31_122270160098236139.avif',
-    '/images/inne/2025-09-24_122252410712236139.avif',
-    '/images/miot-c-przygotowania/2026-03-03_122280949208236139.avif',
+    {
+      src: '/images/mama/aria-portret.avif',
+      alt: 'Aria — brązowy deresz wyżła czeskiego, siedzi z radosnym wyrazem i pucharem podczas prób pracy.',
+    },
+    {
+      src: '/images/mama/aria-wystawa-podium.avif',
+      alt: 'Aria na podium „1" Międzynarodowej Wystawy Psów Rasowych — zwyciężczyni rasy między rozetami.',
+    },
+    {
+      src: '/images/mama/aria-proby-pracy.avif',
+      alt: 'Aria skupiona podczas prób pracy w polu, z pucharem i ringówką — sprawdzona suka użytkowa.',
+    },
+    {
+      src: '/images/mama/aria-jezioro-zachod.avif',
+      alt: 'Aria nad jeziorem o zachodzie słońca — wpatrzona w złotą taflę wody.',
+    },
+    {
+      src: '/images/mama/aria-plywanie.avif',
+      alt: 'Aria pływa razem z Modestą w jeziorze o zmierzchu — uwielbia wodę.',
+    },
+    {
+      src: '/images/mama/aria-w-trawie.avif',
+      alt: 'Aria w wysokiej trawie w słoneczny dzień, w towarzystwie przewodnika.',
+    },
   ],
 };
 
@@ -154,14 +178,32 @@ export const TATA: Dog = {
   livesAtKennel: true,
   galleryCount: 6,
   pedigreePdfPath: '/documents/eros-rodowod.pdf',
-  portraitImage: '/images/inne/2024-09-14_122169217496236139.avif',
+  portraitImage: '/images/tata/eros-portret.avif',
   galleryImages: [
-    '/images/inne/2024-09-14_122169217496236139.avif',
-    '/images/miot-a/2024-03-24_122117540306236139.avif',
-    '/images/miot-a/2024-03-20_122115393518236139.avif',
-    '/images/inne/2025-08-29_122247499040236139.avif',
-    '/images/inne/2025-12-31_122270160008236139.avif',
-    '/images/miot-c-przygotowania/2026-03-03_122280949010236139.avif',
+    {
+      src: '/images/tata/eros-portret.avif',
+      alt: 'Eros z Vallis Baptismi — portret w ciepłym, wieczornym świetle, z wystawową rozetą na szyi.',
+    },
+    {
+      src: '/images/tata/eros-wystawa-cacib.avif',
+      alt: 'Eros prezentowany na podium podczas XXVI Międzynarodowej Wystawy Psów Rasowych CACIB w Krakowie.',
+    },
+    {
+      src: '/images/tata/eros-aria-para.avif',
+      alt: 'Eros i Aria — para hodowlana Krainy Wąsaczy, siwy deresz i brązowy deresz obok siebie.',
+    },
+    {
+      src: '/images/tata/eros-miot.avif',
+      alt: 'Eros jako dumny ojciec — spokojnie czuwa, gdy szczenięta z miotu rozbiegają się po schodach.',
+    },
+    {
+      src: '/images/tata/eros-szczeniak.avif',
+      alt: 'Eros w przydomowym ogrodzie podczas spotkania z jednym ze szczeniąt.',
+    },
+    {
+      src: '/images/tata/eros-wystawa-ring.avif',
+      alt: 'Eros wystawiany w ringu podczas wystawy CACIB w Krakowie — pełna sylwetka w pozycji wystawowej.',
+    },
   ],
 };
 
@@ -234,21 +276,23 @@ export const LITTERS: readonly Litter[] = [
         desc: 'Syn Arii z pierwszego miotu — razem przejęli trawnik 😍 To z takich szczeniąt jesteśmy najbardziej dumni.',
       },
     ],
-    galleryCount: 12,
-    coverImage: '/images/miot-a/2024-05-28_122140646666236139.avif',
+    galleryCount: 14,
+    coverImage: '/images/miot-a/szczenie-portret-brodka.avif',
     images: [
+      '/images/miot-a/miot-a-przytulanie.avif',
+      '/images/miot-a/miot-a-grupa-w-tunelu.avif',
+      '/images/miot-a/joga-szczenie-na-macie.avif',
+      '/images/miot-a/szczenie-portret-brodka.avif',
+      '/images/miot-a/szczenie-siedzi.avif',
+      '/images/miot-a/szczenie-na-krzesle.avif',
+      '/images/miot-a/szczenie-stoi.avif',
+      '/images/miot-a/szczenie-w-trzcinach.avif',
+      '/images/miot-a/szczenie-w-lesie.avif',
+      '/images/miot-a/szczeniaki-w-trawie.avif',
       '/images/miot-a/2024-05-28_122140646666236139.avif',
-      '/images/miot-a/2024-05-28_122140646420236139.avif',
       '/images/miot-a/2024-05-25_122139798416236139.avif',
-      '/images/miot-a/2024-05-25_122139798374236139.avif',
-      '/images/miot-a/2024-05-25_122139798332236139.avif',
-      '/images/miot-a/2024-05-25_122139798290236139.avif',
-      '/images/miot-a/2024-05-21_122138649590236139.avif',
-      '/images/miot-a/2024-05-21_122138649548236139.avif',
       '/images/miot-a/2024-05-10_122135346062236139.avif',
-      '/images/miot-a/2024-05-10_122135346008236139.avif',
-      '/images/miot-a/2024-05-10_122135346002236139.avif',
-      '/images/miot-a/2024-05-10_122135345906236139.avif',
+      '/images/miot-a/2024-04-16_122127260768236139.avif',
     ],
   },
   {
@@ -282,25 +326,24 @@ export const LITTERS: readonly Litter[] = [
         desc: 'Pies z miotu B w nowym domu, prawdziwy partner w terenie. Symbol tego do czego dążymy w hodowli — pies pracujący i kochający towarzysz w jednym.',
       },
     ],
-    galleryCount: 16,
-    coverImage: '/images/miot-b/miot-b-1.avif',
+    galleryCount: 15,
+    coverImage: '/images/miot-b/szczenie-na-dywanie.avif',
     images: [
-      '/images/miot-b/miot-b-1.avif',
-      '/images/miot-b/miot-b-2.avif',
-      '/images/miot-b/miot-b-3.avif',
-      '/images/miot-b/miot-b-4.avif',
-      '/images/miot-b/miot-b-5.avif',
-      '/images/miot-b/miot-b-6.avif',
-      '/images/miot-b/miot-b-7.avif',
-      '/images/miot-b/miot-b-8.avif',
-      '/images/miot-b/2025-07-24_122239735526236139.avif',
+      '/images/miot-b/noworodki-z-mama.avif',
+      '/images/miot-b/noworodek-portret.avif',
+      '/images/miot-b/noworodki-razem.avif',
+      '/images/miot-b/szczenie-na-dywanie.avif',
+      '/images/miot-b/szczenie-stoi-dywan.avif',
+      '/images/miot-b/szczenie-dywan-2.avif',
+      '/images/miot-b/szczenie-na-rekach.avif',
       '/images/miot-b/2025-07-23_122239564844236139.avif',
-      '/images/miot-b/2025-07-23_122239564832236139.avif',
-      '/images/miot-b/2025-07-23_122239564760236139.avif',
-      '/images/miot-b/2025-07-23_122239564748236139.avif',
-      '/images/miot-b/2025-07-23_122239564712236139.avif',
-      '/images/miot-b/2025-07-21_122239129304236139.avif',
-      '/images/miot-b/2025-07-21_122239129286236139.avif',
+      '/images/miot-b/2025-07-24_122239735526236139.avif',
+      '/images/miot-b/woda-aport-1.avif',
+      '/images/miot-b/woda-aport-2.avif',
+      '/images/miot-b/woda-aport-3.avif',
+      '/images/miot-b/woda-plywanie-1.avif',
+      '/images/miot-b/woda-plywanie-2.avif',
+      '/images/miot-b/miot-b-1.avif',
     ],
   },
   {
@@ -403,51 +446,41 @@ export type GalleryItem = {
  * `placeholder-frame` bo plik nie istnieje).
  */
 export const GALLERY: readonly GalleryItem[] = [
-  // ── Mioty ──
-  // Miot A (marzec-maj 2024)
+  // ── Mioty / szczenięta ──
+  // Miot A (2024)
+  { src: '/images/miot-a/szczenie-portret-brodka.avif', alt: 'Szczenię z miotu A — portret z bliska', category: 'mioty', caption: 'Miot A · 2024' },
+  { src: '/images/miot-a/joga-szczenie-na-macie.avif', alt: 'Joga ze szczeniakiem wyżła czeskiego na macie', category: 'mioty', caption: 'Joga ze szczeniakiem' },
+  { src: '/images/miot-a/miot-a-grupa-w-tunelu.avif', alt: 'Miot A — gromadka szczeniąt razem', category: 'mioty' },
+  { src: '/images/miot-a/miot-a-przytulanie.avif', alt: 'Przytulanie ze szczeniętami miotu A', category: 'mioty' },
+  { src: '/images/miot-a/szczenie-siedzi.avif', alt: 'Podrośnięte szczenię miotu A — siedzi', category: 'mioty' },
+  { src: '/images/miot-a/szczeniaki-w-trawie.avif', alt: 'Szczenięta miotu A bawią się w trawie', category: 'mioty' },
+  { src: '/images/miot-a/szczenie-w-lesie.avif', alt: 'Szczenię miotu A na leśnej wyprawie', category: 'mioty' },
   { src: '/images/miot-a/2024-05-28_122140646666236139.avif', alt: 'Miot A — podrośnięte szczenięta', category: 'mioty', caption: 'Miot A · maj 2024' },
-  { src: '/images/miot-a/2024-05-25_122139798416236139.avif', alt: 'Miot A — odkrywanie świata', category: 'mioty' },
-  { src: '/images/miot-a/2024-05-10_122135346062236139.avif', alt: 'Miot A — szczenięta razem', category: 'mioty' },
-  { src: '/images/miot-a/2024-04-16_122127260768236139.avif', alt: 'Miot A — w pierwszych tygodniach', category: 'mioty' },
-  // Miot B (maj-lipiec 2025) — Basta, Berta
-  { src: '/images/miot-b/miot-b-1.avif', alt: 'Miot B — szczenięta', category: 'mioty', caption: 'Miot B · maj 2025' },
+  // Miot B (2025) — Basta, Berta, noworodki
+  { src: '/images/miot-b/noworodki-z-mama.avif', alt: 'Miot B — noworodki przy mamie Arii', category: 'mioty', caption: 'Miot B · maj 2025' },
+  { src: '/images/miot-b/noworodek-portret.avif', alt: 'Noworodek miotu B — pierwsze dni życia', category: 'mioty' },
+  { src: '/images/miot-b/noworodki-razem.avif', alt: 'Miot B — szczenięta tulą się razem', category: 'mioty' },
+  { src: '/images/miot-b/szczenie-na-dywanie.avif', alt: 'Szczenię miotu B odkrywa świat', category: 'mioty' },
+  { src: '/images/miot-b/szczenie-na-rekach.avif', alt: 'Szczenię miotu B na rękach', category: 'mioty' },
   { src: '/images/miot-b/2025-07-23_122239564844236139.avif', alt: 'Basta z Krainy Wąsaczy', category: 'mioty', caption: 'Basta — brązowy deresz' },
-  { src: '/images/miot-b/2025-07-24_122239735526236139.avif', alt: 'Miot B — Berta', category: 'mioty', caption: 'Berta — młoda łowczyni' },
-  { src: '/images/miot-b/miot-b-5.avif', alt: 'Miot B — kolaż szczeniąt', category: 'mioty' },
-  // Miot C — zdjęcia rodziców i przygotowań do miotu
-  { src: '/images/miot-c-przygotowania/2026-03-26_122284950116236139.avif', alt: 'Przygotowania do miotu C', category: 'mioty', caption: 'Miot C · planowany' },
-  { src: '/images/miot-c-przygotowania/2026-03-03_122280949208236139.avif', alt: 'Wiosna 2026 — Aria i Eros', category: 'mioty' },
-  // ── Rodzice ──
-  { src: '/images/inne/2025-09-24_122252410712236139.avif', alt: 'Aria (Nancy ze Staropleských luk) — portret', category: 'rodzice', caption: 'Aria — nasza suka hodowlana' },
-  { src: '/images/inne/2025-09-24_122252410640236139.avif', alt: 'Aria w terenie', category: 'rodzice' },
-  { src: '/images/inne/2025-09-24_122252410568236139.avif', alt: 'Aria — portret', category: 'rodzice' },
-  { src: '/images/inne/2025-08-29_122247499040236139.avif', alt: 'Eros z Vallis Baptismi', category: 'rodzice', caption: 'Eros — reproduktor miotu B' },
-  { src: '/images/inne/2025-08-29_122247499028236139.avif', alt: 'Eros — eksterier', category: 'rodzice' },
-  { src: '/images/inne/2025-08-29_122247498992236139.avif', alt: 'Eros — chwila skupienia', category: 'rodzice' },
-  // ── Praca w polu / codzienne życie ──
-  { src: '/images/inne/2025-12-31_122270160098236139.avif', alt: 'Praca w terenie — koniec 2025', category: 'praca', caption: 'Nowy Rok 2026 — nowe tropy' },
-  { src: '/images/inne/2025-12-31_122270160050236139.avif', alt: 'Wyprawa do lasu', category: 'praca' },
-  { src: '/images/inne/2025-12-31_122270160008236139.avif', alt: 'Polowanie w lesie', category: 'praca' },
-  { src: '/images/inne/2025-09-24_122252410490236139.avif', alt: 'Berta w pracy', category: 'praca' },
-  { src: '/images/inne/2025-09-24_122252410424236139.avif', alt: 'Dorastający wyżeł czeski', category: 'praca' },
-  { src: '/images/inne/2025-09-24_122252410346236139.avif', alt: 'Praca w polu', category: 'praca' },
-  { src: '/images/inne/2025-09-24_122252410310236139.avif', alt: 'Codzienność hodowli', category: 'praca' },
-  { src: '/images/miot-c-przygotowania/2026-03-03_122280949184236139.avif', alt: 'Wiosenne słońce', category: 'praca', caption: 'Pierwsza wiosna 2026' },
-  // Praca w polu / łowisko — z 2025
-  { src: '/images/inne/2025-08-29_122247499040236139.avif', alt: 'Eros w terenie', category: 'praca' },
-  { src: '/images/inne/2025-08-29_122247499028236139.avif', alt: 'Aria w polu', category: 'praca' },
-  { src: '/images/inne/2025-08-29_122247498992236139.avif', alt: 'Praca z psami', category: 'praca' },
+  // ── Praca / woda / łowisko ──
+  { src: '/images/miot-b/woda-aport-1.avif', alt: 'Wyżeł czeski aportuje z jeziora', category: 'praca', caption: 'Aport z wody' },
+  { src: '/images/miot-b/woda-aport-3.avif', alt: 'Aport z wody — pies płynie z aportem', category: 'praca' },
+  { src: '/images/miot-b/woda-plywanie-1.avif', alt: 'Pływanie w jeziorze — pies w swoim żywiole', category: 'praca' },
+  { src: '/images/miot-b/woda-plywanie-2.avif', alt: 'Wyżeł czeski pływa w jeziorze', category: 'praca' },
+  { src: '/images/mama/aria-plywanie.avif', alt: 'Aria pływa o zmierzchu razem z Modestą', category: 'praca', caption: 'Uwielbiają wodę' },
+  { src: '/images/inne/2025-12-31_122270160098236139.avif', alt: 'Zimowa wyprawa do lasu', category: 'praca', caption: 'Nowy Rok 2026 — nowe tropy' },
   { src: '/images/miot-a/2024-03-20_122115393518236139.avif', alt: 'Aria i Eros — bieganie w lesie', category: 'praca', caption: 'Idealne psy do biegania' },
+  // ── Rodzice ──
+  { src: '/images/mama/aria-portret.avif', alt: 'Aria — portret suki hodowlanej', category: 'rodzice', caption: 'Aria — nasza suka hodowlana' },
+  { src: '/images/mama/aria-jezioro-zachod.avif', alt: 'Aria nad jeziorem o zachodzie słońca', category: 'rodzice' },
+  { src: '/images/tata/eros-portret.avif', alt: 'Eros z Vallis Baptismi — portret', category: 'rodzice', caption: 'Eros — reproduktor miotu B' },
+  { src: '/images/tata/eros-aria-para.avif', alt: 'Aria i Eros — para hodowlana Krainy Wąsaczy', category: 'rodzice' },
   // ── Wystawy ──
+  { src: '/images/tata/eros-wystawa-cacib.avif', alt: 'Eros na ringu CACIB w Krakowie', category: 'wystawy', caption: 'CACIB Kraków' },
+  { src: '/images/mama/aria-wystawa-podium.avif', alt: 'Aria na podium „1" — Zwycięzca Rasy', category: 'wystawy', caption: 'Zwycięzca Rasy' },
+  { src: '/images/tata/eros-wystawa-ring.avif', alt: 'Eros prezentowany w ringu wystawowym', category: 'wystawy' },
   { src: '/images/inne/2024-09-14_122169217496236139.avif', alt: 'Eros — Zwycięzca Rasy CACIB Kraków', category: 'wystawy', caption: 'CACIB Kraków — Zwycięzca Rasy' },
-  { src: '/images/inne/2024-09-14_122169217526236139.avif', alt: 'Eros na ringu CACIB', category: 'wystawy' },
-  { src: '/images/inne/2025-01-05_122193377324236139.avif', alt: 'Aria — Międzynarodowa Wystawa Wrocław 2024', category: 'wystawy', caption: 'Wrocław 2024 — Zwycięzca Rasy' },
-  { src: '/images/inne/2025-01-05_122193377360236139.avif', alt: 'Aria na wystawie we Wrocławiu', category: 'wystawy' },
-  { src: '/images/inne/2025-01-05_122193377396236139.avif', alt: 'Aria i Eros — Najlepsza Para', category: 'wystawy', caption: 'Finał: Najlepsza Para' },
-  { src: '/images/inne/2025-01-05_122193377432236139.avif', alt: 'Ring główny — Wrocław 2024', category: 'wystawy' },
-  { src: '/images/miot-b/2025-05-04_122221659986236139.avif', alt: 'Hunting Expo Kraków', category: 'wystawy', caption: 'Hunting Expo Kraków 2025' },
-  { src: '/images/miot-b/2025-05-04_122221659962236139.avif', alt: 'Hunting Expo — stoisko', category: 'wystawy' },
-  { src: '/images/miot-b/miot-b-8.avif', alt: 'Miot B — odpoczynek', category: 'mioty' },
 ] as const;
 
 /**

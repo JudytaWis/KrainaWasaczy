@@ -13,9 +13,14 @@ type DogDetailProps = {
  */
 export function DogDetail({ dog }: DogDetailProps) {
   const gallerySlots = Array.from({ length: dog.galleryCount });
-  const gallery = dog.galleryImages ?? [];
-  const mainImg = dog.portraitImage ?? gallery[0];
-  const restImgs = mainImg && gallery.length > 0 ? gallery.filter((src) => src !== mainImg) : [];
+  // Normalizujemy galerię do par { src, alt } — wpisy tekstowe dostają alt generowany.
+  const gallery = (dog.galleryImages ?? []).map((img) =>
+    typeof img === 'string' ? { src: img, alt: `${dog.name} — zdjęcie` } : img,
+  );
+  const mainImg = dog.portraitImage ?? gallery[0]?.src;
+  const mainAlt =
+    gallery.find((img) => img.src === mainImg)?.alt ?? `${dog.name} — główne zdjęcie`;
+  const restImgs = mainImg ? gallery.filter((img) => img.src !== mainImg) : [];
 
   return (
     <>
@@ -72,21 +77,21 @@ export function DogDetail({ dog }: DogDetailProps) {
               <div className="relative col-span-2 row-span-2 aspect-square overflow-hidden rounded-lg shadow-xl ring-1 ring-gold/30 lg:col-span-2 lg:row-span-2">
                 <Image
                   src={mainImg}
-                  alt={`${dog.name} — główne zdjęcie`}
+                  alt={mainAlt}
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 66vw"
                   className="object-cover"
                 />
               </div>
-              {restImgs.map((src, i) => (
+              {restImgs.map((img) => (
                 <div
-                  key={src}
+                  key={img.src}
                   className="relative aspect-square overflow-hidden rounded-lg ring-1 ring-bark-100/40 transition hover:shadow-lg hover:ring-gold/40"
                 >
                   <Image
-                    src={src}
-                    alt={`${dog.name} — zdjęcie ${i + 2}`}
+                    src={img.src}
+                    alt={img.alt}
                     fill
                     sizes="(max-width: 1024px) 50vw, 33vw"
                     loading="lazy"

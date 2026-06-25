@@ -35,3 +35,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 data/
+
+# źródłowe zdjęcia (oryginały do obróbki — nie wrzucamy do repo)
+/zdjecia-zrodlowe/
+/*.zip
+# luźne foldery z rozpakowanych archiwów w roocie
+/Miot */

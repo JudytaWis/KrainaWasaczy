@@ -1,0 +1,69 @@
+=========================================================
+ SZABLON EmailJS — FORMULARZ REZERWACJI SZCZENIAKA
+=========================================================
+
+Subject (Temat):
+{{subject}}
+
+Pola po prawej (zakładka Content / Settings):
+  To Email:   wyzel.czeski.fousek@gmail.com
+  From Name:  Kraina Wąsaczy — rezerwacja
+  From Email: ✅ zaznacz „Use Default Email Address"
+  Reply To:   {{reply_to}}
+
+Content → kliknij „Edit Content" i wklej poniższy HTML:
+---------------------------------------------------------
+<div style="font-family: system-ui, sans-serif, Arial; font-size: 14px; color: #2c3e50; max-width: 600px;">
+  <div style="font-size: 18px; font-weight: bold; margin-bottom: 4px;">
+    Nowa rezerwacja szczeniaka — Kraina Wąsaczy
+  </div>
+  <div style="color: #7a8a99; font-size: 13px; margin-bottom: 16px;">
+    {{subject}}
+  </div>
+
+  <table role="presentation" style="width: 100%; border-collapse: collapse;">
+    <tr>
+      <td style="padding: 6px 0; color: #7a8a99; width: 150px;">Imię i nazwisko</td>
+      <td style="padding: 6px 0;"><strong>{{from_name}}</strong></td>
+    </tr>
+    <tr>
+      <td style="padding: 6px 0; color: #7a8a99;">Telefon</td>
+      <td style="padding: 6px 0;">{{phone}}</td>
+    </tr>
+    <tr>
+      <td style="padding: 6px 0; color: #7a8a99;">Email</td>
+      <td style="padding: 6px 0;"><a href="mailto:{{reply_to}}">{{reply_to}}</a></td>
+    </tr>
+    <tr>
+      <td style="padding: 6px 0; color: #7a8a99;">Miasto</td>
+      <td style="padding: 6px 0;">{{city}}</td>
+    </tr>
+  </table>
+
+  <div style="margin-top: 12px; border-top: 1px dashed #d8dee3;"></div>
+
+  <table role="presentation" style="width: 100%; border-collapse: collapse;">
+    <tr>
+      <td style="padding: 6px 0; color: #7a8a99; width: 150px;">Profil aktywności</td>
+      <td style="padding: 6px 0;"><strong>{{activity}}</strong></td>
+    </tr>
+    <tr>
+      <td style="padding: 6px 0; color: #7a8a99;">Preferowana płeć</td>
+      <td style="padding: 6px 0;">{{sex}}</td>
+    </tr>
+    <tr>
+      <td style="padding: 6px 0; color: #7a8a99;">Preferowany miot</td>
+      <td style="padding: 6px 0;">{{litter}}</td>
+    </tr>
+  </table>
+
+  <div style="margin-top: 16px; color: #7a8a99; font-size: 13px;">Doświadczenie z psami:</div>
+  <div style="margin-top: 4px; padding: 12px 15px; background-color: #f6f8f6; border-left: 3px solid #6b8f5a; border-radius: 4px; white-space: pre-wrap;">{{experience}}</div>
+
+  <div style="margin-top: 16px; color: #7a8a99; font-size: 13px;">Dodatkowa wiadomość:</div>
+  <div style="margin-top: 4px; padding: 12px 15px; background-color: #f6f8f6; border-left: 3px solid #b08d57; border-radius: 4px; white-space: pre-wrap;">{{message}}</div>
+
+  <div style="margin-top: 16px; color: #aaaaaa; font-size: 12px;">
+    Zgoda RODO: TAK · Aby odpowiedzieć, kliknij „Odpowiedz".
+  </div>
+</div>

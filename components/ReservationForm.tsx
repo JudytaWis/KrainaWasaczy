@@ -3,8 +3,12 @@
 import { useState, type FormEvent } from 'react';
 import { Send } from 'lucide-react';
 import { CONTACT } from '@/lib/placeholders';
+import { sendEmail, emailjsConfigured, TEMPLATE_RESERVATION } from '@/lib/email';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
+
+/** Czy formularz rezerwacji wyśle przez EmailJS (jest service + key + szablon). */
+const RESERVATION_READY = emailjsConfigured && Boolean(TEMPLATE_RESERVATION);
 
 const ACTIVITY_OPTIONS = [
   { value: 'mysliwy', label: 'Aktywny myśliwy' },
@@ -27,14 +31,14 @@ const LITTER_OPTIONS = [
 /**
  * Formularz rezerwacji szczeniaka.
  *
- * Aktualnie otwiera klienta poczty (mailto:) — pozwala wystartować bez backendu.
- * TODO: po podpięciu Resend / API route — zamienić blok mailto na fetch('/api/reservation').
+ * Wysyłka przez EmailJS (lib/email.ts). Gdy klucze EmailJS nie są ustawione
+ * w env, formularz robi fallback na klienta poczty (mailto:).
  */
 export function ReservationForm() {
   const [status, setStatus] = useState<Status>('idle');
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus('submitting');
     setErrorMessage(null);
@@ -115,18 +119,34 @@ export function ReservationForm() {
       'Zgoda RODO: TAK',
     ].join('\n');
 
-    const mailto = `mailto:${CONTACT.email}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`;
-
     try {
-      window.location.href = mailto;
+      if (RESERVATION_READY) {
+        await sendEmail(TEMPLATE_RESERVATION, {
+          subject,
+          from_name: name,
+          reply_to: email,
+          phone,
+          city: city || '—',
+          activity: activityLabel,
+          sex: sexLabel,
+          litter: litterLabel || '—',
+          experience: experience || '—',
+          message: message || '—',
+        });
+      } else {
+        // Fallback bez konfiguracji EmailJS — otwórz klienta poczty.
+        const mailto = `mailto:${CONTACT.email}?subject=${encodeURIComponent(
+          subject,
+        )}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailto;
+      }
       setStatus('success');
       form.reset();
     } catch {
       setStatus('error');
       setErrorMessage(
-        'Nie udało się otworzyć klienta poczty. Napisz bezpośrednio na ' + CONTACT.email,
+        'Nie udało się wysłać rezerwacji. Spróbuj ponownie lub napisz bezpośrednio na ' +
+          CONTACT.email,
       );
     }
   }
@@ -253,7 +273,9 @@ export function ReservationForm() {
 
         {status === 'success' && (
           <p className="text-sm text-forest-400" role="status">
-            Otwarto Twój klient poczty — wystarczy wysłać wiadomość. Odpowiemy w ciągu 1-3 dni.
+            {RESERVATION_READY
+              ? 'Dziękujemy! Rezerwacja została wysłana. Odpowiemy w ciągu 1-3 dni.'
+              : 'Otwarto Twój klient poczty — wystarczy wysłać wiadomość. Odpowiemy w ciągu 1-3 dni.'}
           </p>
         )}
         {status === 'error' && errorMessage && (
