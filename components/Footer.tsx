@@ -135,12 +135,27 @@ export function Footer() {
           <p>
             © {year} {SITE.name}. Wszelkie prawa zastrzeżone.
           </p>
-          <p className="flex flex-wrap gap-x-4 gap-y-1">
+          <p className="flex flex-wrap items-center gap-x-4 gap-y-1">
             <Link href="/polityka-prywatnosci" className="hover:text-cream-50">
               Polityka prywatności
             </Link>
             <a href="/sitemap.xml" className="hover:text-cream-50">
               Mapa strony
+            </a>
+            <a
+              href="https://highheelscode.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 hover:text-cream-50"
+            >
+              Design &amp; Development: High Heels Code
+              <img
+                src="/images/hhc-logo.svg"
+                alt="High Heels Code"
+                width={12}
+                height={11}
+                loading="lazy"
+              />
             </a>
           </p>
         </div>
