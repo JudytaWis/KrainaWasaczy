@@ -9,6 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     freq: MetadataRoute.Sitemap[number]['changeFrequency'];
   }> = [
     { path: '/', priority: 1.0, freq: 'monthly' },
+    { path: '/hodowla', priority: 0.9, freq: 'monthly' },
+    { path: '/o-rasie', priority: 0.85, freq: 'monthly' },
     { path: '/o-nas', priority: 0.85, freq: 'monthly' },
     { path: '/rodzice', priority: 0.9, freq: 'monthly' },
     { path: '/rodzice/mama', priority: 0.8, freq: 'monthly' },

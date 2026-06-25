@@ -87,6 +87,21 @@ export function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/hodowla" className="hover:text-cream-50">
+                Hodowla
+              </Link>
+            </li>
+            <li>
+              <Link href="/o-nas" className="hover:text-cream-50">
+                O nas
+              </Link>
+            </li>
+            <li>
+              <Link href="/o-rasie" className="hover:text-cream-50">
+                O rasie — wyżeł czeski
+              </Link>
+            </li>
+            <li>
               <Link href="/rodzice" className="hover:text-cream-50">
                 Nasi rodzice
               </Link>

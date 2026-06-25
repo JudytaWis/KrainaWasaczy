@@ -10,7 +10,14 @@ type NavItem = { label: string; href: string; children?: NavChild[] };
 
 const NAV_ITEMS: NavItem[] = [
   { label: 'Strona główna', href: '/' },
-  { label: 'O nas', href: '/o-nas' },
+  {
+    label: 'Hodowla',
+    href: '/hodowla',
+    children: [
+      { label: 'O nas', href: '/o-nas' },
+      { label: 'O rasie — wyżeł czeski', href: '/o-rasie' },
+    ],
+  },
   {
     label: 'Rodzice',
     href: '/rodzice',
