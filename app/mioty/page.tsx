@@ -57,6 +57,7 @@ export default function LittersPage() {
                       alt={`${litter.name} — okładka`}
                       fill
                       sizes="(max-width: 1024px) 100vw, 33vw"
+                      quality={68}
                       loading="lazy"
                       className="object-cover"
                     />

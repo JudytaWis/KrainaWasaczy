@@ -23,6 +23,7 @@ export function DogCard({ dog }: DogCardProps) {
             alt={`${dog.name} — ${dog.role.toLowerCase()}`}
             fill
             sizes="(max-width: 640px) 100vw, 50vw"
+            quality={68}
             className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
         ) : (

@@ -70,6 +70,7 @@ export function GalleryGrid({ items }: Props) {
                 alt={item.alt}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                quality={68}
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 loading={i < 6 ? 'eager' : 'lazy'}
               />

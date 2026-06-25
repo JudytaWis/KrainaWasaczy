@@ -78,7 +78,7 @@ export function organizationJsonLd() {
     description: SITE.longDescription,
     url: SITE.url,
     logo: `${SITE.url}/logo.png`,
-    image: `${SITE.url}/og.jpg`,
+    image: `${SITE.url}/opengraph-image`,
     address: {
       '@type': 'PostalAddress',
       streetAddress: SITE.street,

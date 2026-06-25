@@ -3,6 +3,7 @@ import { Inter, Cormorant_Garamond } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { CookieBanner } from '@/components/CookieBanner';
 import { JsonLd } from '@/components/JsonLd';
 import { organizationJsonLd } from '@/lib/seo';
 import { SITE } from '@/lib/placeholders';
@@ -61,20 +62,12 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: `${SITE.name} — ${SITE.shortDescription}`,
     description: SITE.longDescription,
-    images: [
-      {
-        url: '/og.jpg',
-        width: 1200,
-        height: 630,
-        alt: `${SITE.name} — hodowla wyżła czeskiego`,
-      },
-    ],
+    // Obrazek OG generuje dynamicznie app/opengraph-image.tsx
   },
   twitter: {
     card: 'summary_large_image',
     title: `${SITE.name} — ${SITE.shortDescription}`,
     description: SITE.longDescription,
-    images: ['/og.jpg'],
   },
   robots: {
     index: true,
@@ -118,6 +111,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <CookieBanner />
         <JsonLd data={organizationJsonLd()} />
       </body>
     </html>

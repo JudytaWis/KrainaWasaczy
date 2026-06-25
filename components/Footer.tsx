@@ -135,11 +135,13 @@ export function Footer() {
           <p>
             © {year} {SITE.name}. Wszelkie prawa zastrzeżone.
           </p>
-          <p>
-            {/* TODO: link do strony polityki prywatności */}
-            <Link href="#" className="hover:text-cream-50">
+          <p className="flex flex-wrap gap-x-4 gap-y-1">
+            <Link href="/polityka-prywatnosci" className="hover:text-cream-50">
               Polityka prywatności
             </Link>
+            <a href="/sitemap.xml" className="hover:text-cream-50">
+              Mapa strony
+            </a>
           </p>
         </div>
       </div>

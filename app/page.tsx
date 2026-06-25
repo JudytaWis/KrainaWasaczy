@@ -72,11 +72,12 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-3">
               <div className="relative col-span-2 aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-gold/30 shadow-2xl">
                 <Image
-                  src="/images/miot-a/2024-04-03_122122069118236139.avif"
-                  alt="Aria ze szczeniętami — Kraina Wąsaczy"
+                  src="/images/inne/hodowca-wyzly-czeskie-wystawa.avif"
+                  alt="Hodowca z wyżłami czeskimi (Český fousek) na wystawie psów — Kraina Wąsaczy"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 40vw"
+                  quality={72}
                   className="object-cover"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bark-700/40 via-transparent to-transparent" />
@@ -87,6 +88,7 @@ export default function HomePage() {
                   alt="Szczenięta z miotu A"
                   fill
                   sizes="(max-width: 1024px) 50vw, 20vw"
+                  quality={68}
                   className="object-cover"
                 />
               </div>
@@ -96,6 +98,7 @@ export default function HomePage() {
                   alt="Joga ze szczeniakiem wyżła czeskiego szorstkowłosego z miotu A — Kraina Wąsaczy"
                   fill
                   sizes="(max-width: 1024px) 50vw, 20vw"
+                  quality={68}
                   className="object-cover"
                 />
               </div>
@@ -336,6 +339,7 @@ export default function HomePage() {
               alt="Szczenię czeskiego wyżła szorstkowłosego (Český fousek) z miotu A — Kraina Wąsaczy"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
+              quality={68}
               className="object-cover"
             />
           </div>

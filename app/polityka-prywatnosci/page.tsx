@@ -91,10 +91,11 @@ export default function PrivacyPolicyPage() {
             <h2 className="heading-md">4. Odbiorcy danych</h2>
             <p className="mt-3 leading-relaxed">
               Twoich danych nie udostępniamy podmiotom trzecim z wyjątkiem dostawców
-              technicznych (poczta elektroniczna, hosting strony — Vercel Inc.) oraz
-              przypadków, gdy obowiązek udostępnienia wynika z przepisów prawa.
-              Dane nie są przekazywane poza Europejski Obszar Gospodarczy poza
-              transferami realizowanymi przez Vercel Inc. na podstawie standardowych
+              technicznych: hostingu strony (Vercel Inc.), usługi wysyłki wiadomości
+              z formularzy (EmailJS) oraz poczty elektronicznej (Google / Gmail),
+              a także przypadków, gdy obowiązek udostępnienia wynika z przepisów prawa.
+              Część z tych dostawców działa poza Europejskim Obszarem Gospodarczym —
+              przekazywanie danych odbywa się wówczas na podstawie standardowych
               klauzul umownych zatwierdzonych przez Komisję Europejską.
             </p>
           </div>
