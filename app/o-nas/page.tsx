@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Heart, Crosshair, Award, ArrowRight } from 'lucide-react';
+import { Heart, Crosshair, Award, ArrowRight, FileText } from 'lucide-react';
 import { JsonLd } from '@/components/JsonLd';
 import { Reveal } from '@/components/Reveal';
 import { pageMetadata, breadcrumbJsonLd } from '@/lib/seo';
@@ -179,6 +179,21 @@ export default function AboutPage() {
               </div>
             </Reveal>
           </div>
+
+          <Reveal>
+            <div className="mt-12 text-center">
+              <a
+                href="/documents/certyfikat-przydomka.pdf"
+                className="btn-secondary"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FileText className="h-4 w-4" aria-hidden="true" />
+                Pobierz certyfikat przydomka „z Krainy Wąsaczy" (PDF)
+              </a>
+            </div>
+          </Reveal>
         </div>
       </section>
 

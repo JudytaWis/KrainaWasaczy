@@ -72,8 +72,8 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-3">
               <div className="relative col-span-2 aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-gold/30 shadow-2xl">
                 <Image
-                  src="/images/inne/hodowca-wyzly-czeskie-wystawa.avif"
-                  alt="Hodowca z wyżłami czeskimi (Český fousek) na wystawie psów — Kraina Wąsaczy"
+                  src="/images/inne/aria-eros-proby-medale.avif"
+                  alt="Aria i Eros — wyżły czeskie (Český fousek) z medalami i pucharem po próbach pracy — Kraina Wąsaczy"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 40vw"

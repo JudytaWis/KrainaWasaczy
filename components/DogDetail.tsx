@@ -62,7 +62,7 @@ export function DogDetail({ dog }: DogDetailProps) {
                 rel="noopener noreferrer"
               >
                 <FileText className="h-4 w-4" aria-hidden="true" />
-                Pobierz metrykę (PDF)
+                Pobierz rodowód (PDF)
               </a>
             </div>
           </div>

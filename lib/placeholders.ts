@@ -100,7 +100,7 @@ export const MAMA: Dog = {
     'Aria to fundament naszej hodowli — duża, silna suczka o brązowym umaszczeniu, z wyjątkową psychiką, naturalnym talentem użytkowym i silnym przywiązaniu do człowieka. Wraz z Erosem tworzy naszą „najlepszą parę" — i w domu, i na ringu wystawowym, i w łowisku. Razem chodzą z nami w teren, polują, wystawiają, aportują z lądu i z wody, tropią. Pełne imię hodowlane: Aria (Nancy ze Staropleských luk) — pochodzi z czeskiej hodowli o sprawdzonych pracujących liniach. W 2024 roku zdobyła tytuł Zwycięzcy Rasy na Międzynarodowej Wystawie Psów we Wrocławiu, a wspólnie z Erosem znalazła się w finale w kategorii „Najlepsza Para". Aria to matka miotu A (marzec 2024) i miotu B (maj 2025) — naszych pierwszych pokoleń wyżłów czeskich z Krainy Wąsaczy. Modesta codziennie biega z nią po lasach i łąkach Bibic — Aria po prostu kocha ruch i wodę.',
   livesAtKennel: true,
   galleryCount: 6,
-  pedigreePdfPath: '/documents/metryka-psy.pdf',
+  pedigreePdfPath: '/documents/aria-rodowod.pdf',
   portraitImage: '/images/mama/aria-portret.avif',
   galleryImages: [
     {
@@ -154,7 +154,7 @@ export const TATA: Dog = {
     'Eros z Vallis Baptismi to deresz z brązową głową — partner Arii w hodowli, w łowisku i w domu. Łączy eksterier wystawowy z prawdziwym charakterem psa pracującego: razem z Arturem chodzi na polowania, tropi, aportuje, wystawia. Mieszka u nas, na co dzień, jest pełnoprawnym członkiem rodziny. Reproduktor miotu B (maj 2025) — Eros dał potomstwo o silnym instynkcie łowieckim, zrównoważonej psychice i pięknym eksterierze. Jego osiągnięcia wystawowe to m.in. Zwycięzca Rasy z oceną Doskonałą na XXVII Międzynarodowej Wystawie Psów Rasowych CACIB w Krakowie oraz finał w kategorii „Najlepsza Para" razem z Arią na Międzynarodowej Wystawie Psów we Wrocławiu 2024. To pies do biegania po lesie, pływania w jeziorach i wieczornych drzemek na kanapie — w jednym.',
   livesAtKennel: true,
   galleryCount: 6,
-  pedigreePdfPath: '/documents/metryka-psy.pdf',
+  pedigreePdfPath: '/documents/eros-rodowod.pdf',
   portraitImage: '/images/tata/eros-portret.avif',
   galleryImages: [
     {
@@ -454,7 +454,7 @@ export const GALLERY: readonly GalleryItem[] = [
   { src: '/images/tata/eros-portret.avif', alt: 'Eros z Vallis Baptismi — portret', category: 'rodzice', caption: 'Eros — reproduktor miotu B' },
   { src: '/images/tata/eros-aria-para.avif', alt: 'Aria i Eros — para hodowlana Krainy Wąsaczy', category: 'rodzice' },
   // ── Wystawy ──
-  { src: '/images/tata/eros-wystawa-cacib.avif', alt: 'Eros na ringu CACIB w Krakowie', category: 'wystawy', caption: 'CACIB Kraków' },
+  { src: '/images/inne/aria-eros-proby-medale.avif', alt: 'Aria i Eros z medalami i pucharem po próbach pracy', category: 'wystawy', caption: 'Medale i puchar po próbach pracy' },
   { src: '/images/mama/aria-wystawa-podium.avif', alt: 'Aria na podium „1" — Zwycięzca Rasy', category: 'wystawy', caption: 'Zwycięzca Rasy' },
   { src: '/images/tata/eros-wystawa-ring.avif', alt: 'Eros prezentowany w ringu wystawowym', category: 'wystawy' },
   { src: '/images/inne/2024-09-14_122169217496236139.avif', alt: 'Eros — Zwycięzca Rasy CACIB Kraków', category: 'wystawy', caption: 'CACIB Kraków — Zwycięzca Rasy' },
