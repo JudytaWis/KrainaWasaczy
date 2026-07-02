@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { SITE } from './placeholders';
+import { SITE, CONTACT } from './placeholders';
 
 type PageMetadataInput = {
   title: string;
@@ -75,10 +75,16 @@ export function organizationJsonLd() {
     additionalType: 'https://www.productontology.org/id/Dog_breeder',
     '@id': `${SITE.url}/#organization`,
     name: SITE.name,
+    legalName: SITE.fullName,
     description: SITE.longDescription,
+    slogan: SITE.tagline,
     url: SITE.url,
     logo: `${SITE.url}/logo.png`,
     image: `${SITE.url}/opengraph-image`,
+    telephone: CONTACT.phone,
+    email: CONTACT.email,
+    priceRange: '4000–7000 PLN',
+    currenciesAccepted: 'PLN',
     address: {
       '@type': 'PostalAddress',
       streetAddress: SITE.street,
